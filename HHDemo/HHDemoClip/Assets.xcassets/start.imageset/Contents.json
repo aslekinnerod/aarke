@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "blue-circle-emoji.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
