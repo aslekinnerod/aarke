@@ -12,7 +12,7 @@ struct SpecsView: View {
         VStack{
             TopBanner()
                 .padding(.bottom, -60)
-            HeadingView(title: "SPESIFIKASJONER")
+            HeadingView(title: "SPECIFIKATIONER")
             Image("specs")
                 .resizable()
                 .scaledToFit()

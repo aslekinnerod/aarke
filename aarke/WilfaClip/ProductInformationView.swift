@@ -13,7 +13,7 @@ struct ProductInformationView: View {
             TopBanner()
                 .padding(.bottom, -55)
                 .offset(x: -12)
-            HeadingView(title: "PRODUKT INFORMASJON")
+            HeadingView(title: "PRODUKTINFORMATION")
                 .padding(.bottom)
             VStack(alignment: .leading){
                 Text("CARBONATOR 3")

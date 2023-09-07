@@ -40,7 +40,7 @@ struct CustomerFeedBackView: View {
                             .shadow(radius: 1)
                             .padding(.leading, 38)
                         if name.isEmpty{
-                            Text("NAVN")
+                            Text("NAMN")
                                 .padding(.leading, 45)
                                 .font(.custom("Helvetica Neue", size: 15))
                                 .fontWeight(.bold)
@@ -61,7 +61,7 @@ struct CustomerFeedBackView: View {
                             .shadow(radius: 1)
                             .padding(.leading, 38)
                         if omtale.isEmpty{
-                            Text("OMTALE")
+                            Text("BESKRIV")
                                 .padding(.leading, 45)
                                 .font(.custom("Helvetica Neue", size: 15))
                                 .fontWeight(.bold)
@@ -77,7 +77,7 @@ struct CustomerFeedBackView: View {
                     Button(action: {
                         send.toggle()
                     }) {
-                        Text("SEND INN")
+                        Text("SKICKA")
                             .frame(width: 354, height: 53)
                             .font(.custom("Helveticaneue", size: 15))
                             .fontWeight(.bold)

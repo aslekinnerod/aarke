@@ -23,6 +23,6 @@ struct DetailHeaderView: View {
 
 struct DetailHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailHeaderView(title: "Title")
+        DetailHeaderView(title: "Titel")
     }
 }

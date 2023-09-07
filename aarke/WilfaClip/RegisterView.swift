@@ -60,7 +60,7 @@ struct RegisterView: View {
                             .shadow(radius: 1)
                             .padding(.leading, 38)
                         if name.isEmpty{
-                            Text("NAVN")
+                            Text("NAMN")
                                 .padding(.leading, 45)
                                 .font(.custom("Helvetica Neue", size: 15))
                                 .fontWeight(.bold)
@@ -115,7 +115,7 @@ struct RegisterView: View {
                     Button(action: {
                         self.send.toggle()
                     }) {
-                        Text("Skicka inn")
+                        Text("SKICKA")
                             .frame(width: 354, height: 53)
                             .font(.custom("Helveticaneue", size: 15))
                             .fontWeight(.bold)

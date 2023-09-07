@@ -31,6 +31,6 @@ struct ManualButtonView: View {
 
 struct ManualButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ManualButtonView(title: "Produktoversikt")
+        ManualButtonView(title: "Produktöversikt")
     }
 }

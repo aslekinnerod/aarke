@@ -10,11 +10,11 @@ import SwiftUI
 struct SpareParts: View {
 
     let products: [Product] = [
-        Product(imageName: "putsduk", title: "PUTSKLUT SVART", detail: "Reservedel WSPL-3B", price: "99,-"),
-        Product(imageName: "dropbricka", title: "DROPBRICKA STÅL", detail: "Reservedel WSPL-3B", price: "139,-"),
-        Product(imageName: "kork", title: "KORK TIL FLASK", detail: "Reservedel WSPL-3B", price: "199,-"),
-        Product(imageName: "t_ringar", title: "PERFORMANCE KANNE TIL FILTERHOLDER", detail: "Reservedel WSPL-3B", price: "99,-"),
-        Product(imageName: "kork", title: "KORK TIL FLASK ALIMINIUM", detail: "Reservedel WSPL-3B", price: "99,-")
+        Product(imageName: "putsduk", title: "POLERDUK", detail: "Reservedel WSPL-3B", price: "99,-"),
+        Product(imageName: "dropbricka", title: "DROPPFATS-GALLER", detail: "Reservedel WSPL-3B", price: "139,-"),
+        Product(imageName: "kork", title: "STÅLKORK TIL PET-FLASKE", detail: "Reservedel WSPL-3B", price: "199,-"),
+        Product(imageName: "t_ringar", title: "GUMMI PACKNING", detail: "Reservedel WSPL-3B", price: "99,-"),
+        Product(imageName: "kork", title: "STÅLKORK TILL PET-FLASKE", detail: "Reservedel WSPL-3B", price: "99,-")
     ]
 
 

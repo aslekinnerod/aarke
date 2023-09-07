@@ -33,6 +33,6 @@ struct CellView: View {
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(title: "Produkt informasjon")
+        CellView(title: "Produktinformation")
     }
 }

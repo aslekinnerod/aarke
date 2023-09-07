@@ -82,7 +82,7 @@ struct ContentView: View {
                     }
                 }
                 
-                Text("Vad kan vi hjälpe dig med?")
+                Text("Vad kan vi hjälpa dig med?")
                     .font(.custom("Helvetica Neue", size: 25))
                     .fontWeight(.bold)
                     .foregroundColor(.darkGray)
@@ -98,7 +98,7 @@ struct ContentView: View {
 
               
                     NavigationLink(destination: ProductInformationView()){
-                        CellView(title: "Produkt information")}
+                        CellView(title: "Produktinformation")}
                     
                     NavigationLink(destination: SpareParts()){
                         CellView(title: "Reservdelar")

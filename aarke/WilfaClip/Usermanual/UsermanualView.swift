@@ -14,30 +14,30 @@ struct UsermanualView: View {
         VStack{
             TopBanner()
                 .padding(.bottom, -55)
-            HeadingView(title: "BRUKERMANUAL")
+            HeadingView(title: "BRUKSANVISNING")
                 .padding(.bottom, 20)
             NavigationLink(destination: ProductOverView()){
-                ManualButtonView(title: "Produktoversikt")
+                ManualButtonView(title: "Produktöversikt")
             }
             .navigationTitle("")
             
             NavigationLink(destination: BeforeUseView()){
-                ManualButtonView(title: "Før bruk")
+                ManualButtonView(title: "Innan användning")
             }
             .navigationTitle("")
             
             NavigationLink(destination: UserguideView()){
-                ManualButtonView(title: "Bruk")
+                ManualButtonView(title: "Användning")
             }
             .navigationTitle("")
             
             NavigationLink(destination: CleaningView()){
-                ManualButtonView(title: "Rengjøring og vedlikehold")
+                ManualButtonView(title: "Rengöring och underhold")
             }
             .navigationTitle("")
             
             NavigationLink(destination: ProblemSolvingView()){
-                ManualButtonView(title: "Problemløsing")
+                ManualButtonView(title: "Problemlösing")
             }
             .navigationTitle("")
             Spacer()
