@@ -10,9 +10,9 @@ import SwiftUI
 struct CleaningView: View {
     var body: some View {
         VStack{
-            DetailHeaderView(title: "Rengjøring og vedlikehold")
+            DetailHeaderView(title: "Kolsyra vatten")
            
-                 Image("cleaning")
+                 Image("Component 5")
                         .resizable()
         
                 .padding(.all, 20)

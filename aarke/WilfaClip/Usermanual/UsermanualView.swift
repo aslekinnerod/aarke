@@ -17,29 +17,29 @@ struct UsermanualView: View {
             HeadingView(title: "BRUKSANVISNING")
                 .padding(.bottom, 20)
             NavigationLink(destination: ProductOverView()){
-                ManualButtonView(title: "Produktöversikt")
+                ManualButtonView(title: "Förpackningens innehåll")
             }
             .navigationTitle("")
             
             NavigationLink(destination: BeforeUseView()){
-                ManualButtonView(title: "Innan användning")
+                ManualButtonView(title: "Produktens komponenter")
             }
             .navigationTitle("")
             
             NavigationLink(destination: UserguideView()){
-                ManualButtonView(title: "Användning")
+                ManualButtonView(title: "Installation av kollsyrepatron")
             }
             .navigationTitle("")
             
             NavigationLink(destination: CleaningView()){
-                ManualButtonView(title: "Rengöring och underhold")
+                ManualButtonView(title: "Kolsyra vatten")
             }
             .navigationTitle("")
             
-            NavigationLink(destination: ProblemSolvingView()){
+          /*  NavigationLink(destination: ProblemSolvingView()){
                 ManualButtonView(title: "Problemlösing")
             }
-            .navigationTitle("")
+            .navigationTitle("")*/
             Spacer()
                 .navigationBarBackButtonHidden(true)
             

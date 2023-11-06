@@ -35,7 +35,7 @@ struct HeadingView: View {
 
             Spacer()
             Text(title)
-                .font(.custom("Helvetica Neue", size: 25))
+                .font(.custom("Avenir Black", size: 25))
                 .fontWeight(.bold)
                 .foregroundColor(.darkGray)
                 .padding(.leading, -15)

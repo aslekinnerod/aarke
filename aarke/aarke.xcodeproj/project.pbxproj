@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		686823622AE8309A00D74134 /* Avenir in Resources */ = {isa = PBXBuildFile; fileRef = 686823612AE8309900D74134 /* Avenir */; };
+		686823642AE92BFA00D74134 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686823632AE92BFA00D74134 /* TestView.swift */; };
 		68BB325F292DFA5A0041895B /* UsermanualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB325E292DFA5A0041895B /* UsermanualView.swift */; };
 		68BB3261292DFB140041895B /* ManualButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB3260292DFB140041895B /* ManualButtonView.swift */; };
 		68BB3265292E15740041895B /* CustomerFeedBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB3264292E15740041895B /* CustomerFeedBackView.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		686823612AE8309900D74134 /* Avenir */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Avenir; sourceTree = "<group>"; };
+		686823632AE92BFA00D74134 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		68BB325E292DFA5A0041895B /* UsermanualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsermanualView.swift; sourceTree = "<group>"; };
 		68BB3260292DFB140041895B /* ManualButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualButtonView.swift; sourceTree = "<group>"; };
 		68BB3264292E15740041895B /* CustomerFeedBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFeedBackView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		686823602AE7ACFE00D74134 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				686823612AE8309900D74134 /* Avenir */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		68BB3262292E14800041895B /* RReusableViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,10 +201,12 @@
 		6CEF451F292B8B1F00610566 /* WilfaClip */ = {
 			isa = PBXGroup;
 			children = (
+				686823602AE7ACFE00D74134 /* Fonts */,
 				6CEF4520292B8B1F00610566 /* WilfaClipApp.swift */,
 				68BB326C292E4DCF0041895B /* Usermanual */,
 				68BB3262292E14800041895B /* RReusableViews */,
 				6CEF4522292B8B1F00610566 /* ContentView.swift */,
+				686823632AE92BFA00D74134 /* TestView.swift */,
 				68BB3287292F65000041895B /* ProductInformationView.swift */,
 				68BB3264292E15740041895B /* CustomerFeedBackView.swift */,
 				6CEF4534292CC35600610566 /* RegisterView.swift */,
@@ -297,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CEF4514292B8AF100610566 /* Preview Assets.xcassets in Resources */,
+				686823622AE8309A00D74134 /* Avenir in Resources */,
 				6CEF4511292B8AF100610566 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686823642AE92BFA00D74134 /* TestView.swift in Sources */,
 				6CEF450F292B8AEF00610566 /* ContentView.swift in Sources */,
 				6CEF450D292B8AEF00610566 /* WilfaApp.swift in Sources */,
 			);

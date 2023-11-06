@@ -15,14 +15,14 @@ struct ManualButtonView: View {
         ZStack{
             Rectangle()
                 .frame(width: 311, height: 75)
-                .foregroundColor(.darkGray)
+                .foregroundColor(.buttonGray)
                 .cornerRadius(5)
                 
                
             
             Text(title)
-                .foregroundColor(.white)
-                .font(.custom("Helvetica Neue", size: 18))
+                .foregroundColor(.black)
+                .font(.custom("Avenir Heavy", size: 20))
                 .fontWeight(.bold)
             
         }

@@ -15,7 +15,7 @@ struct DetailHeaderView: View {
         VStack(){
            
             Text(title)
-                .font(.custom("Helvetica Neue", size: 24))
+                .font(.custom("Avenir Heavy", size: 25))
                 .fontWeight(.bold)
         }
     }

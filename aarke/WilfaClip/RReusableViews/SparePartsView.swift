@@ -30,18 +30,18 @@ struct SparePartsView: View {
                     .frame(width: 100, height: 100)
                 VStack(alignment: .leading){
                     Text(title)
-                        .font(.custom("Helvetica_Neue", size: 16))
+                        .font(.custom("Avenir Heavy", size: 16))
                         .padding([.leading, .trailing])
                         .padding(.bottom, 0.3)
                     Text(detail)
-                        .font(.custom("Helvetica_Neue", size: 12))
+                        .font(.custom("Avenir Heavy", size: 12))
                         .padding([.leading, .trailing, .bottom])
                     HStack{
                         Circle()
                             .frame(width: 12, height: 12)
                             .foregroundColor(Color(red: 51/255, green: 94/255, blue: 68/255))
                         Text("På lager")
-                            .font(.custom("Helvetica_Neue", size: 12))
+                            .font(.custom("Avenir Heavy", size: 12))
 
                     }
                     .padding([.leading, .trailing])

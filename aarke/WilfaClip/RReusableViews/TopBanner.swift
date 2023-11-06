@@ -46,7 +46,7 @@ struct TopBanner: View {
                         .padding(.leading)
                         .padding(.bottom, 10)
                         .foregroundColor(.darkGray)
-                        .font(.custom("Helvetica neue", size: 18))
+                        .font(.custom("Avenir Heava", size: 18))
                         .fontWeight(.bold)
                         
                     }

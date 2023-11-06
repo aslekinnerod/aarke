@@ -10,9 +10,9 @@ import SwiftUI
 struct ProductOverView: View {
     var body: some View {
         VStack{
-            DetailHeaderView(title: "Produktoversikt")
+            DetailHeaderView(title: "Förpackningens innehåll")
            
-                 Image("overview")
+                 Image("Component 1")
                 .resizable()
                 .scaledToFit()
                 .padding()

@@ -16,13 +16,13 @@ struct CellView: View {
         ZStack{
             Rectangle()
                 .frame(width: 311, height: 75)
-                .foregroundColor(.darkGray)
+                .foregroundColor(.buttonGray)
                 .cornerRadius(5)
                 
                 Text(title)
-                    .font(.custom("Helvetica Neue", size: 18))
+                    .font(.custom("Avenir Heavy", size: 18))
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 
           
         }

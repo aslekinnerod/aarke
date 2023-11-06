@@ -10,9 +10,9 @@ import SwiftUI
 struct BeforeUseView: View {
     var body: some View {
         VStack{
-            DetailHeaderView(title: "Før bruk")
+            DetailHeaderView(title: "Produktens komponenter")
            
-                 Image("before")
+                 Image("Component 3")
                         .resizable()
         
                 .padding(.all, 10)

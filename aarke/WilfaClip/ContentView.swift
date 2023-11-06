@@ -24,7 +24,13 @@ struct ContentView: View {
                         .foregroundColor(.accentColor)
                     HStack(alignment: .center){
                         VStack{
-                            ZStack{
+                            Image("Logo - black")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                .padding(.leading)
+                                .offset(y: -100)
+                           /* ZStack{
                                 Circle()
                                     .frame(width: 100, height: 100)
                                     .foregroundColor(.white)
@@ -34,7 +40,7 @@ struct ContentView: View {
                                     .scaledToFit()
                                     .frame(width: 80, height: 80)
                                     .padding(.leading)
-                            }
+                            }*/
                             Button("Svenska") {
                                 language = true
                             }
@@ -42,13 +48,13 @@ struct ContentView: View {
                                       LanguageView()
                                    }
                             .padding(10)
-                            .background(Color(red: 243/255, green: 242/255, blue: 239/255, opacity: 0.72))
+                            .background(Color(red: 174/255, green: 162/255, blue: 154/255, opacity: 0.72))
                             .clipShape(Rectangle())
                             .cornerRadius(10)
                             .padding(.leading)
                             .padding(.bottom, 10)
-                            .foregroundColor(.black)
-                            .font(.custom("Helvetica neue", size: 18))
+                            .foregroundColor(.white)
+                            .font(.custom("Avenir Regular", size: 18))
                             .fontWeight(.bold)
                             
                         }
@@ -61,14 +67,14 @@ struct ContentView: View {
                             regtister = true
                         }
                         .padding(10)
-                        .background(Color(red: 243/255, green: 242/255, blue: 239/255, opacity: 0.72))
+                        .background(Color(red: 174/255, green: 162/255, blue: 154/255, opacity: 0.72))
                         .clipShape(Rectangle())
                         .cornerRadius(10)
                         .padding(.trailing, 13)
-                        .foregroundColor(.darkGray)
-                        .font(.custom("Helvetica neue", size: 18))
+                        .foregroundColor(.white)
+                        .font(.custom("Avenir Regular", size: 18))
                         .fontWeight(.bold)
-                        .offset(y: 45)
+                        .offset(y: 49)
                     }
                 }
                 .padding(.bottom, 12.0)
@@ -82,8 +88,10 @@ struct ContentView: View {
                     }
                 }
                 
-                Text("Vad kan vi hjälpa dig med?")
-                    .font(.custom("Helvetica Neue", size: 25))
+               
+                
+                Text("Vällkommen til aarke")
+                    .font(.custom("Avenir Heavy", size: 25))
                     .fontWeight(.bold)
                     .foregroundColor(.darkGray)
                     .padding(.bottom, 20)
@@ -95,8 +103,6 @@ struct ContentView: View {
                         CellView(title: "Specifikationer")
                     }
                 
-
-              
                     NavigationLink(destination: ProductInformationView()){
                         CellView(title: "Produktinformation")}
                     
@@ -104,15 +110,10 @@ struct ContentView: View {
                         CellView(title: "Reservdelar")
                     }
              
-                
-              
                     NavigationLink(destination: CustomerFeedBackView()){
                         CellView(title: "Recensioner")
                             
                     }
-               
-                    
-
                 .navigationBarBackButtonHidden(true)
                 
                 
@@ -147,3 +148,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+

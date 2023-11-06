@@ -2,12 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Avenir Book.ttf</string>
+		<string>Avenir Light.ttf</string>
+		<string>Avenir Black.ttf</string>
+		<string>Avenir Heavy.ttf</string>
+		<string>Avenir Regular.ttf</string>
+	</array>
 	<key>NSAppClip</key>
 	<dict>
 		<key>NSAppClipRequestEphemeralUserNotification</key>
-		<false/>
+		<true/>
 		<key>NSAppClipRequestLocationConfirmation</key>
-		<false/>
+		<true/>
 	</dict>
 </dict>
 </plist>

@@ -9,15 +9,15 @@ import SwiftUI
 
     struct UserguideView: View {
         
-        let images = [Image("image0"), Image("image1"), Image("image2")]
+        let images = [Image("Component 4")]
         @State var n = 0
         @State var index = 0
         
         var body: some View {
             VStack{
-                DetailHeaderView(title: "Bruk")
+                DetailHeaderView(title: "Installation av kollsyrepatron")
                 TabView (selection: self.$index) {
-                    ForEach(0..<3) { i in
+                    ForEach(0..<images.count) { i in
                      images[i]
                             .resizable()
                     }
@@ -29,9 +29,9 @@ import SwiftUI
                     n = newValue
                 }
                 
-                
+                /*
                 HStack{
-                    ForEach(0..<3){ i in
+                    ForEach(0..<images.count){ i in
                         Rectangle()
                             .fill(i == n ? .black : Color(red: 243/255, green: 240/255, blue: 240/255))
                             .frame(height: 3)
@@ -40,9 +40,11 @@ import SwiftUI
                 }
                 .padding([.leading, .trailing])
                 .frame(width: 250)
+                
                 Spacer()
+                 */
             }
-            .padding(.top, -30)
+            
         }
     }
 

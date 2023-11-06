@@ -13,6 +13,10 @@ extension Color {
           return Color(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0))
       }
     
+    public static var buttonGray: Color {
+        return Color(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.1))
+    }
+    
     public static var lightGray: Color {
         return Color(UIColor(red: 243/255, green: 240/255, blue: 240/255, alpha: 1.0))
     }
