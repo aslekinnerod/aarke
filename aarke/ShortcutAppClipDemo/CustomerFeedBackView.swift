@@ -1,6 +1,6 @@
 //
 //  CustomerFeedBackView.swift
-//  WilfaClip
+//  ShortcutAppClipDemo
 //
 //  Created by Asle Kinnerød on 23/11/2022.
 //

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6CEF451D292B8B1F00610566"
-               BuildableName = "ShortcutAppClipDemoClip.app"
-               BlueprintName = "ShortcutAppClipDemoClip"
-               ReferencedContainer = "container:ShortcutAppClipDemo.xcodeproj">
+               BuildableName = "ShortcutDemoClip.app"
+               BlueprintName = "ShortcutDemoClip"
+               ReferencedContainer = "container:ShortcutDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CEF451D292B8B1F00610566"
-            BuildableName = "ShortcutAppClipDemoClip.app"
-            BlueprintName = "ShortcutAppClipDemoClip"
-            ReferencedContainer = "container:ShortcutAppClipDemo.xcodeproj">
+            BuildableName = "ShortcutDemoClip.app"
+            BlueprintName = "ShortcutDemoClip"
+            ReferencedContainer = "container:ShortcutDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CEF451D292B8B1F00610566"
-            BuildableName = "ShortcutAppClipDemoClip.app"
-            BlueprintName = "ShortcutAppClipDemoClip"
-            ReferencedContainer = "container:ShortcutAppClipDemo.xcodeproj">
+            BuildableName = "ShortcutDemoClip.app"
+            BlueprintName = "ShortcutDemoClip"
+            ReferencedContainer = "container:ShortcutDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

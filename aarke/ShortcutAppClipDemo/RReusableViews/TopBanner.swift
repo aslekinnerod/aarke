@@ -1,6 +1,6 @@
 //
 //  TopBanner.swift
-//  WilfaClip
+//  ShortcutAppClipDemo
 //
 //  Created by Asle Kinnerød on 22/11/2022.
 //

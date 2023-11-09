@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Wilfa
+//  ShortcutDemoApp
 //
 //  Created by Asle Kinnerød on 21/11/2022.
 //

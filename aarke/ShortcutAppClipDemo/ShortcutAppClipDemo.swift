@@ -1,6 +1,6 @@
 //
-//  WilfaClipApp.swift
-//  WilfaClip
+//  ShortcutAppClipDemoApp.swift
+//  ShortcutAppClipDemo
 //
 //  Created by Asle Kinnerød on 21/11/2022.
 //
@@ -38,7 +38,7 @@ enum Brand: String, CaseIterable {
 }
 
 @main
-struct ShortcutDemoAppClip: App {
+struct ShortcutAppClipDemo: App {
     @State var brand: Brand?
 
     var body: some Scene {
