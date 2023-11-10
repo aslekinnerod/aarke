@@ -8,17 +8,43 @@
 import SwiftUI
 
 struct BrandInfo {
-    private let assetFolderName: String
+    let assetFolderName: String
     let name: String
 
-    init(assetFolderName: String, name: String) {
-        self.assetFolderName = assetFolderName
-        self.name = name
-    }
-
+    //MARK: - Parent View
     var headerImage: Image {
         Image("\(assetFolderName)/headerImage")
     }
+    var logoImage: Image {
+        Image("\(assetFolderName)/logo")
+    }
+
+    // Language
+    let selectedLanguage: String = "Svenska"
+    let additionalLanguages: [String] = [
+        "Finska",
+        "Danska",
+        "Norska",
+        "Tyska",
+        "Engelska",
+        "Spanska",
+        "Islandska"
+    ]
+
+    let registerProductText = "Registrera Produkt"
+
+    // "Wälkommen til Aarke"
+    let subheading = "Full product name such as Rema 1000 Æ"
+
+    let userManualText = "Bruksanvisning"
+    let specificationsText = "Specifikationer"
+    let productInformationText = "Produktinformation"
+    let sparePartsText = "Reservdelar"
+    let customerFeedbackText = "Recensioner"
+
+    //MARK: - Notifications
+    let notificationText: String = "Welcome to Register your Shortcut App"
+    //"Registrer din Carbonator 3 nå 🥳"
 }
 enum Brand: String, CaseIterable {
     case porsche = "/porsche"
@@ -45,7 +71,7 @@ struct ShortcutAppClipDemo: App {
         WindowGroup {
             Group {
                 if let brand {
-                    ContentView(brand: brand)
+                    ContentView(brand: .shortcut)
                 } else {
                     ProgressView()
                 }

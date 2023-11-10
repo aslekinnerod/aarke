@@ -8,109 +8,48 @@
 import SwiftUI
 
 struct LanguageView: View {
-    
-   
+    let brand: Brand
+
     var body: some View {
-        VStack{
+        VStack {
             Text("Velg språk:")
                 .font(.custom("Avenir Heavy", size: 24))
                 .fontWeight(.bold)
                 .padding(.bottom)
-            
-            ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Svenska ")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
-                +
-                Text(Image(systemName: "checkmark"))
-                    .foregroundColor(.darkGray)
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
 
-            }
             ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Finska")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
+                RectangleView()
+                HStack {
+                    Text("Svenska")
+                    Text(Image(systemName: "checkmark"))
+                }
             }
-            ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Danska")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
+
+            ForEach(brand.info.additionalLanguages, id: \.self) { language in
+                ZStack{
+                    RectangleView()
+                    Text(language)
+                }
             }
-            ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Norska")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
-            }
-            ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Tyska")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
-            }
-            ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Engelska")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
-            }
-            ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Spanska")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
-            }
-            ZStack{
-                Rectangle()
-                    .frame(width: 354, height: 56)
-                    .foregroundColor(Color.lightGray)
-                    .cornerRadius(5)
-                Text("Islandska")
-                    .font(.custom("Avenir Heavy", size: 18))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
-            }
-            
         }
+        .font(.custom("Avenir Heavy", size: 18))
+        .fontWeight(.bold)
+        .foregroundColor(.darkGray)
+    }
+}
+
+struct RectangleView: View {
+    var body: some View {
+        Rectangle()
+            .frame(width: 354, height: 56)
+            .foregroundColor(Color.lightGray)
+            .cornerRadius(5)
     }
 }
 
 struct LanguageView_Previews: PreviewProvider {
     static var previews: some View {
-        LanguageView()
+        LanguageView(brand: .shortcut)
     }
 }
 

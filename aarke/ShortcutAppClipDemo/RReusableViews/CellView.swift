@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct CellView: View {
-
     var title: String
-    
 
     var body: some View {
         ZStack{

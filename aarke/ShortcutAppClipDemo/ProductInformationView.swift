@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ProductInformationView: View {
+    let brand: Brand
+
     var body: some View {
         VStack{
-            TopBanner()
+            TopBanner(brand: brand)
                 .padding(.bottom, -55)
                 .offset(x: -12)
             HeadingView(title: "PRODUKTINFORMATION")
@@ -47,7 +49,7 @@ struct ProductInformationView: View {
             
             VideoView()
                 .padding(40)
-                .navigationBarBackButtonHidden(true)
+//                .navigationBarBackButtonHidden(true)
             
         }
     }
@@ -55,6 +57,6 @@ struct ProductInformationView: View {
 
 struct ProductInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductInformationView()
+        ProductInformationView(brand: .shortcut)
     }
 }

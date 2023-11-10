@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SpareParts: View {
+    let brand: Brand
 
     let products: [Product] = [
         Product(imageName: "putsduk", title: "POLERDUK", detail: "Reservedel WSPL-3B", price: "99,-"),
@@ -20,7 +21,7 @@ struct SpareParts: View {
 
     var body: some View {
         VStack{
-            TopBanner()
+            TopBanner(brand: brand)
                 .padding(.bottom, -50)
         HeadingView(title: "RESERVEDELER")
 
@@ -40,6 +41,6 @@ struct SpareParts: View {
 
 struct SpareParts_Previews: PreviewProvider {
     static var previews: some View {
-        SpareParts()
+        SpareParts(brand: .shortcut)
     }
 }

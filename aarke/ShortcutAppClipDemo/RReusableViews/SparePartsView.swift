@@ -53,7 +53,7 @@ struct SparePartsView: View {
 
         }
         .frame(width: 160, height: 280)
-        .navigationBarBackButtonHidden(true)
+//        .navigationBarBackButtonHidden(true)
         .padding(7)
 
     }

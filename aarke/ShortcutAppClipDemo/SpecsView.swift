@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SpecsView: View {
+    let brand: Brand
+
     var body: some View {
         VStack{
-            TopBanner()
+            TopBanner(brand: brand)
                 .padding(.bottom, -60)
             HeadingView(title: "SPECIFIKATIONER")
             Image("specs")
@@ -18,12 +20,12 @@ struct SpecsView: View {
                 .scaledToFit()
             Spacer()
         }
-        .navigationBarBackButtonHidden(true)
+//        ./*navigationBarBackButtonHidden*/(true)
     }
 }
 
 struct SpecsView_Previews: PreviewProvider {
     static var previews: some View {
-        SpecsView()
+        SpecsView(brand: .shortcut)
     }
 }

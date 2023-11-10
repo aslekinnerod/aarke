@@ -201,11 +201,11 @@
 		6CEF451F292B8B1F00610566 /* ShortcutAppClipDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6CEF4522292B8B1F00610566 /* ContentView.swift */,
 				686823602AE7ACFE00D74134 /* Fonts */,
 				6CEF4520292B8B1F00610566 /* ShortcutAppClipDemo.swift */,
 				68BB326C292E4DCF0041895B /* Usermanual */,
 				68BB3262292E14800041895B /* RReusableViews */,
-				6CEF4522292B8B1F00610566 /* ContentView.swift */,
 				686823632AE92BFA00D74134 /* TestView.swift */,
 				68BB3287292F65000041895B /* ProductInformationView.swift */,
 				68BB3264292E15740041895B /* CustomerFeedBackView.swift */,

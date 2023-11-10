@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct TopBanner: View {
-    
-    @State var language = false
-    
+    let brand: Brand
+    @State var isPresentingLanguages = false
+
     var body: some View {
         VStack {
             ZStack(alignment: .bottomLeading){
@@ -34,10 +34,10 @@ struct TopBanner: View {
                             
                         }
                         Button("Svenska") {
-                            language = true
+                            isPresentingLanguages = true
                         }
-                        .popover(isPresented: $language) {
-                                  LanguageView()
+                        .popover(isPresented: $isPresentingLanguages) {
+                                  LanguageView(brand: brand)
                                }
                         .padding(10)
                         .background(Color(red: 243/255, green: 242/255, blue: 239/255, opacity: 0.72))
@@ -62,6 +62,6 @@ struct TopBanner: View {
 
 struct TopBanner_Previews: PreviewProvider {
     static var previews: some View {
-        TopBanner()
+        TopBanner(brand: .shortcut)
     }
 }

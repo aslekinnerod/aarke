@@ -16,7 +16,7 @@ struct CustomerFeedBackView: View {
     
     var body: some View {
         VStack{
-            TopBanner()
+            TopBanner(brand: .shortcut)
                 .padding(.bottom, -60)
             HeadingView(title: "RECENSIONER")
                 
@@ -94,7 +94,7 @@ struct CustomerFeedBackView: View {
                 }
                 .opacity(send ? 0 : 1)
             }
-            .navigationBarBackButtonHidden(true)
+//            .navigationBarBackButtonHidden(true)
         }
     }
 }
