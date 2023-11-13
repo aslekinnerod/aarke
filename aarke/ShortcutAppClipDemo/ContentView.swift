@@ -86,7 +86,7 @@ struct ContentView: View {
                     }
                     .padding()
 
-                    NavigationLink(destination: UsermanualView()){
+                    NavigationLink(destination: UsermanualView(brand: brand)){
                         CellView(title: brand.info.userManualText)
                     }
 

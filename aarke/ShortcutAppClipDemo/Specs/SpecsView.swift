@@ -14,13 +14,13 @@ struct SpecsView: View {
         VStack{
             TopBanner(brand: brand)
                 .padding(.bottom, -60)
-            HeadingView(title: "SPECIFIKATIONER")
-            Image("specs")
+            HeadingView(title: brand.info.specsHeaderText)
+
+            brand.info.specsImage
                 .resizable()
                 .scaledToFit()
             Spacer()
         }
-//        ./*navigationBarBackButtonHidden*/(true)
     }
 }
 

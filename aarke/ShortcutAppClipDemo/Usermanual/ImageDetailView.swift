@@ -7,28 +7,27 @@
 
 import SwiftUI
 
-struct ProductOverView: View {
+struct ImageDetailView: View {
+    let title: String
+    let image: Image
+
     var body: some View {
         VStack{
-            DetailHeaderView(title: "Förpackningens innehåll")
-           
-                 Image("Component 1")
+            DetailHeaderView(title: title)
+            image
                 .resizable()
                 .scaledToFit()
                 .padding()
-            
+
             Spacer()
-            }
-            .frame(width: UIScreen.main.bounds.width)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            
-           
-      
+        }
+        .frame(width: UIScreen.main.bounds.width)
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
 }
 
 struct ProductOverView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductOverView()
+        ImageDetailView(title: "Title", image: Image(systemName: "person"))
     }
 }

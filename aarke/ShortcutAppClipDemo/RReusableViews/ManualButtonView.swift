@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ManualButtonView: View {
-    
     var title: String
     
     var body: some View {
@@ -24,7 +23,6 @@ struct ManualButtonView: View {
                 .foregroundColor(.black)
                 .font(.custom("Avenir Heavy", size: 20))
                 .fontWeight(.bold)
-            
         }
     }
 }

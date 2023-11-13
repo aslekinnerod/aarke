@@ -11,7 +11,7 @@ struct BrandInfo {
     let assetFolderName: String
     let name: String
 
-    //MARK: - Parent View
+    // MARK: - Parent View
     var headerImage: Image {
         Image("\(assetFolderName)/headerImage")
     }
@@ -32,20 +32,59 @@ struct BrandInfo {
     ]
 
     let registerProductText = "Registrera Produkt"
+    let subheading = "Wälkommen til Aarke"
 
-    // "Wälkommen til Aarke"
-    let subheading = "Full product name such as Rema 1000 Æ"
-
+    // Cell items in ContentView.
     let userManualText = "Bruksanvisning"
     let specificationsText = "Specifikationer"
     let productInformationText = "Produktinformation"
     let sparePartsText = "Reservdelar"
     let customerFeedbackText = "Recensioner"
 
-    //MARK: - Notifications
+    // MARK: - Notifications
     let notificationText: String = "Welcome to Register your Shortcut App"
     //"Registrer din Carbonator 3 nå 🥳"
+
+    // MARK: - User Manual View
+    let userManualTitleText: String = "BRUKSANVISNING"
+    let userManualProductOverViewText: String = "Förpackningens innehåll"
+    let userManualBeforeUseText: String = "Produktens komponenter"
+    let userManualUserGuideText: String = "Installation av kollsyrepatron"
+    let userManualCleaningText: String = "Kolsyra vatten"
+
+    // Product Overview
+    let userManualProductOverviewHeaderText: String = "Förpackningens innehåll"
+    var userManualProductOverviewImage: Image {
+        Image("\(assetFolderName)/user-manual-image1")
+    }
+
+    // Product Components
+    let userManualProductComponentHeaderText: String = "Produktens komponenter"
+    var userManualProductComponentImage: Image {
+//        "Component 3"
+        Image("\(assetFolderName)/user-manual-image2")
+    }
+
+    // User Guide View
+    let userManualUserGuideViewHeaderText: String = "Installation av kollsyrepatron"
+    var userManualUserGuideImage: Image {
+        //        Image("Component 4")
+        Image("\(assetFolderName)/user-manual-image3")
+    }
+
+    let userManualCleaningViewHeaderText: String = "Kolsyra vatten"
+    var userManualCleaningImage: Image {
+//        "Component 5"
+        Image("\(assetFolderName)/user-manual-image4")
+    }
+
+    // MARK: - Specs View
+    let specsHeaderText: String = "SPECIFIKATIONER"
+    var specsImage: Image {
+        Image("\(assetFolderName)/specs-image")
+    }
 }
+
 enum Brand: String, CaseIterable {
     case porsche = "/porsche"
     case bmw = "/bmw"
@@ -71,7 +110,7 @@ struct ShortcutAppClipDemo: App {
         WindowGroup {
             Group {
                 if let brand {
-                    ContentView(brand: .shortcut)
+                    ContentView(brand: brand)
                 } else {
                     ProgressView()
                 }
