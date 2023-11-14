@@ -30,7 +30,7 @@ struct SubProductsView: View {
     }
 }
 
-struct SpareParts_Previews: PreviewProvider {
+struct SubProductsView_Previews: PreviewProvider {
     static var previews: some View {
         SubProductsView(brand: .shortcut)
     }

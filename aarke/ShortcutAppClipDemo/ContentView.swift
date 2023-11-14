@@ -98,7 +98,7 @@ struct ContentView: View {
                         CellView(title: brand.info.productInformationText)
                     }
 
-                    NavigationLink(destination: SpareParts(brand: brand)){
+                    NavigationLink(destination: SubProductsView(brand: brand)){
                         CellView(title: brand.info.sparePartsText)
                     }
 

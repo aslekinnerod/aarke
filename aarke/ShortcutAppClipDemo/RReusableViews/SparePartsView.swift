@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct SparePartsView: View {
-
-    var imageName: String
-    var title: String
-    var detail: String
-    var price: String
+struct SparePartView: View {
+    let subProduct: SubProduct
+//    var image: Image
+//    var title: String
+//    var detail: String
+//    var price: String
 
 
     var body: some View {
-        ZStack{
+        ZStack {
             Rectangle()
                 .cornerRadius(5)
                 .foregroundColor(.white)
@@ -24,19 +24,19 @@ struct SparePartsView: View {
                       RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.darkGray, lineWidth: 1)
                   )
-            VStack{
-                Image(imageName)
+            VStack {
+                subProduct.image
                     .resizable()
                     .frame(width: 100, height: 100)
                 VStack(alignment: .leading){
-                    Text(title)
+                    Text(subProduct.title)
                         .font(.custom("Avenir Heavy", size: 16))
                         .padding([.leading, .trailing])
                         .padding(.bottom, 0.3)
-                    Text(detail)
+                    Text(subProduct.detail)
                         .font(.custom("Avenir Heavy", size: 12))
                         .padding([.leading, .trailing, .bottom])
-                    HStack{
+                    HStack {
                         Circle()
                             .frame(width: 12, height: 12)
                             .foregroundColor(Color(red: 51/255, green: 94/255, blue: 68/255))
@@ -45,7 +45,7 @@ struct SparePartsView: View {
 
                     }
                     .padding([.leading, .trailing])
-                    Text(price)
+                    Text(subProduct.price)
                         .font(.custom("Helvetica_Neue", size: 12))
                         .padding([.leading, .trailing])
                 }
@@ -61,13 +61,6 @@ struct SparePartsView: View {
 
 struct SparePartsView_Previews: PreviewProvider {
     static var previews: some View {
-        SparePartsView(imageName: "putsduk" , title: "PERFORMANCE KANNE MED LOKK", detail: "Reservedel WSPL-3B", price: "399,-")
+        SparePartView(subProduct: SubProduct(image: Image(systemName: "person"), title: "PERFORMANCE KANNE MED LOKK", detail: "Reservedel WSPL-3B", price: "399,-"))
     }
-}
-
-struct Product {
-    let imageName: String
-    let title: String
-    let detail: String
-    let price: String
 }

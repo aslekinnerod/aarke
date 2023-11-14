@@ -1,8 +1,8 @@
-//
-//  SubProduct.swift
-//  ShortcutDemoClip
-//
-//  Created by Eric Davis on 13/11/2023.
-//
+import SwiftUI
 
-import Foundation
+struct SubProduct {
+    let image: Image
+    let title: String
+    let detail: String
+    let price: String
+}

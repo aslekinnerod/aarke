@@ -39,7 +39,7 @@ struct TopBanner: View {
                         .popover(isPresented: $isPresentingLanguages) {
                                   LanguageView(brand: brand)
                                }
-                        .padding(10)
+//                        .padding(10)
                         .background(Color(red: 243/255, green: 242/255, blue: 239/255, opacity: 0.72))
                         .clipShape(Rectangle())
                         .cornerRadius(10)
