@@ -8,100 +8,101 @@
 import SwiftUI
 
 struct CustomerFeedBackView: View {
-    @State var rating = 0
-    @State var name = ""
-    @State var omtale = ""
-    @State var send: Bool = false
-    @State private var didTap:Bool = false
-    
+    let brand: Brand
+
+    @State private var rating = 0
+    @State private var name = ""
+    @State private var description = ""
+    @State private var didTapSend = false
+    @State private var didTap = false
+
     var body: some View {
-        VStack{
-            TopBanner(brand: .shortcut)
-                .padding(.bottom, -60)
-            HeadingView(title: "RECENSIONER")
-                
+        ScrollView {
+            TopBanner(brand: brand)
+            HeadingView(title: brand.info.customerFeedbackHeaderText)
+
             ZStack{
-                Text("Takk for din tilbakemelding!")
-                    .font(.custom("Helvetica Neue", size: 26))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color(red: 52/255, green: 82/255, blue: 86/255))
-                
-                VStack{
-                    HStack{
+                VStack(spacing: 24) {
+                    HStack {
                         RatingView(rating: $rating)
-                            .padding(.leading, 40)
-                            .padding([.top, .bottom])
                         Spacer()
                     }
-                    ZStack(alignment: .leading){
-                        Rectangle()
-                            .frame(width: 354, height: 56)
-                            .foregroundColor(.lightGray)
-                            .shadow(radius: 1)
-                            .padding(.leading, 38)
-                        if name.isEmpty{
-                            Text("NAMN")
-                                .padding(.leading, 45)
+
+                    TextField(brand.info.customerFeedbackNameTextFieldPlaceholder, text: $name)
+                        .padding()
+                        .frame(height: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color(.lightGray), lineWidth: 2)
+                        )
+                        .padding(.top, 24)
+                        .textContentType(.name)
+                        .textInputAutocapitalization(.words)
+                        .disableAutocorrection(true)
+                        .submitLabel(.done)
+
+                    VStack() {
+                        HStack {
+                            Text(brand.info.customerFeedbackTextEditorTitleText)
                                 .font(.custom("Helvetica Neue", size: 15))
                                 .fontWeight(.bold)
                                 .foregroundColor(.placeholderGray)
+                            Spacer()
                         }
-                        TextField("", text: $name)
-                            .padding(.leading, 45)
-                            .font(.custom("Helvetica Neue", size: 15))
-                            .fontWeight(.bold)
-                            .foregroundColor(.darkGray)
+
+                        TextEditor(text: $description)
+                            .frame(height: 200)
+                            .padding(.horizontal)
+                            .padding(.top)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color(.lightGray), lineWidth: 2)
+                            )
                             .textContentType(.name)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(0)
+                            .submitLabel(.done)
                     }
-                    .padding(.bottom, 10)
-                    ZStack(alignment: .leading){
-                        Rectangle()
-                            .frame(width: 354, height: 251)
-                            .foregroundColor(.lightGray)
-                            .shadow(radius: 1)
-                            .padding(.leading, 38)
-                        if omtale.isEmpty{
-                            Text("BESKRIV")
-                                .padding(.leading, 45)
-                                .font(.custom("Helvetica Neue", size: 15))
-                                .fontWeight(.bold)
-                                .foregroundColor(.placeholderGray)
-                                .offset(y: -100)
-                        }
-                        TextField("", text: $omtale)
-                            .padding(.leading, 45)
-                            .font(.custom("Helvetica Neue", size: 15))
-                            .fontWeight(.bold)
-                            .offset(y: -100)
-                    }
+                    .padding(.top)
+
+
                     Button(action: {
-                        send.toggle()
+                        didTapSend = true
                     }) {
-                        Text("SKICKA")
-                            .frame(width: 354, height: 53)
+                        Text(brand.info.customerFeedbackSubmitButtonText)
+                            .frame(maxWidth: .infinity)
                             .font(.custom("Helveticaneue", size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.darkGray)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 25)
-                                    .stroke(Color.white, lineWidth: 1)
-                            )
+                            .padding(8)
                     }
-                    .background(Color.lightGray)
-                    .cornerRadius(25)
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color.lightGray)
                     .padding(.top, 30)
-                Spacer()
+                    Spacer()
                 }
-                .opacity(send ? 0 : 1)
+                .padding()
             }
-//            .navigationBarBackButtonHidden(true)
+        }
+        .ignoresSafeArea(.all)
+        .alert(isPresented: $didTapSend) {
+            Alert(
+                title: Text(brand.info.customerFeedbackAlertTitle),
+                message: Text(brand.info.customerFeedbackAlertMessage),
+                dismissButton: .default(Text("Ok"), action: {
+                    withAnimation {
+                        name = ""
+                        description = ""
+                        rating = 0
+                    }
+                }))
         }
     }
 }
 
 struct CustomerFeedBackView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerFeedBackView()
+        CustomerFeedBackView(brand: .shortcut)
     }
 }
 

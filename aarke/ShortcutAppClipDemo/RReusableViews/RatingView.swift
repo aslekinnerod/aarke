@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RatingView: View {
-    
     @Binding var rating: Int
     
     var label = ""
@@ -27,7 +26,10 @@ struct RatingView: View {
 
             ForEach(1..<maximumRating + 1, id: \.self) { number in
                 image(for: number)
+                    .resizable()
                     .foregroundColor(number > rating ? offColor : onColor)
+                    .frame(width: 28, height: 28)
+                    .padding(.horizontal, 4)
                     .onTapGesture {
                         rating = number
                     }

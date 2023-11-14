@@ -13,23 +13,7 @@ struct HeadingView: View {
     var title: String
 
     var body: some View {
-        
         HStack{
-//            Button {
-//                presentation.wrappedValue.dismiss()
-//            } label: {
-//                Text(Image(systemName: "chevron.left")
-//                    .renderingMode(.original)
-//
-//                )
-//                    .fontWeight(.medium)
-//                    .foregroundColor(.darkGray)
-//                    .font(.system(size: 26))
-//                    .padding(.leading, 10)
-//
-//
-//            }
-
             Spacer()
             
             Text(title)

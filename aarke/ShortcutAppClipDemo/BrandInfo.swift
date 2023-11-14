@@ -139,4 +139,15 @@ struct BrandInfo {
          )
         ]
     }
+
+    // MARK: - Customer Feedback
+    // Fields
+    let customerFeedbackHeaderText: String = "RECENSIONER"
+    let customerFeedbackNameTextFieldPlaceholder: String = "NAMN"
+    let customerFeedbackTextEditorTitleText: String = "BESKRIV"
+    let customerFeedbackSubmitButtonText: String = "SKICKA"
+
+    // Alert
+    let customerFeedbackAlertTitle: String = "Tusen Takk!"
+    let customerFeedbackAlertMessage: String = "Din tilbakemelding vil bli behandlet fortløpende."
 }

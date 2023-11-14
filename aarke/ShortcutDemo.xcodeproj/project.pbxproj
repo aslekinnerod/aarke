@@ -119,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201E0AE52B03915900FB83C7 /* Sub Products */ = {
+			isa = PBXGroup;
+			children = (
+				2020261E2B025C520054986E /* SubProduct.swift */,
+				6CEF453A292CDF6E00610566 /* SubProductsView.swift */,
+			);
+			path = "Sub Products";
+			sourceTree = "<group>";
+		};
 		202026192B02456D0054986E /* Specs */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +139,6 @@
 		2020261D2B025C300054986E /* SpareParts */ = {
 			isa = PBXGroup;
 			children = (
-				2020261E2B025C520054986E /* SubProduct.swift */,
 			);
 			path = SpareParts;
 			sourceTree = "<group>";
@@ -216,12 +224,12 @@
 				2020261B2B02485D0054986E /* BrandInfo.swift */,
 				68BB326C292E4DCF0041895B /* Usermanual */,
 				202026192B02456D0054986E /* Specs */,
+				201E0AE52B03915900FB83C7 /* Sub Products */,
 				68BB3262292E14800041895B /* RReusableViews */,
 				686823632AE92BFA00D74134 /* TestView.swift */,
 				68BB3287292F65000041895B /* ProductInformationView.swift */,
 				68BB3264292E15740041895B /* CustomerFeedBackView.swift */,
 				6CEF4534292CC35600610566 /* RegisterView.swift */,
-				6CEF453A292CDF6E00610566 /* SubProductsView.swift */,
 				68BB3285292EB4DD0041895B /* VideoView.swift */,
 				6CEF4524292B8B2000610566 /* Assets.xcassets */,
 				6CEF4529292B8B2000610566 /* Info.plist */,
