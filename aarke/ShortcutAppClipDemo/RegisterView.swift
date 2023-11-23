@@ -8,137 +8,98 @@
 import SwiftUI
 
 struct RegisterView: View {
+    let brand: Brand
     @Environment(\.presentationMode) var presentation
-    
+
     @State var name: String = ""
     @State var email: String = ""
-    @State var country: String = "Sverige"
-    @State var send: Bool = false
-    
+    @State var country: String = ""
+    @State var didTapSend: Bool = false
+
     var body: some View {
-        VStack{
-            DetailHeaderView(title: "CARBONATOR 3")
-                .font(.custom("Helvetica neue", size: 25))
-                .fontWeight(.bold)
-                .foregroundColor(.darkGray)
-            Image("bilde 1")
-                .resizable()
-                .scaledToFill()
-            VStack{
-                Text("Serienummer:")
-                    .font(.custom("Helvetica Neue", size: 18))
-                    .fontWeight(.medium)
-                    .foregroundColor(.darkGray)
-                Text("6593794")
-                    .font(.custom("Helvetica Neue", size: 16))
-                    .fontWeight(.regular)
-                    .foregroundColor(.darkGray)
-            }
-            .padding(.bottom)
-            VStack{
-                Text("Produkt:")
-                    .font(.custom("Helvetica Neue", size: 18))
-                    .fontWeight(.medium)
-                    .foregroundColor(.darkGray)
-                Text("aarke Carbonator 3")
-                    .font(.custom("Helvetica Neue", size: 16))
-                    .fontWeight(.regular)
-                    .foregroundColor(.darkGray)
-            }
-            .padding(.bottom, 40)
-            ZStack{
-                Text("Produktet er registrert!")
+        ScrollView {
+            VStack {
+                DetailHeaderView(title: "CARBONATOR 3")
+                    .font(.custom("Helvetica neue", size: 25))
                     .fontWeight(.bold)
-                    .font(.custom("HelveticaNeue", size: 26))
                     .foregroundColor(.darkGray)
-                    .opacity(send ? 1 : 0)
-                VStack{
-                    ZStack(alignment: .leading){
-                        Rectangle()
-                            .frame(width: 354, height: 56)
-                            .foregroundColor(.lightGray)
-                            .shadow(radius: 1)
-                            .padding(.leading, 38)
-                        if name.isEmpty{
-                            Text("NAMN")
-                                .padding(.leading, 45)
-                                .font(.custom("Helvetica Neue", size: 15))
-                                .fontWeight(.bold)
-                                .textContentType(.name)
-                                .foregroundColor(.placeholderGray)
-                        }
-                        TextField("", text: $name)
-                            .padding(.leading, 45)
-                            .font(.custom("Helvetica Neue", size: 15))
-                            .fontWeight(.bold)
-                            .textContentType(.name)
-                            .foregroundColor(.darkGray)
-                    }
-                    .padding(.bottom, 14)
-                    ZStack(alignment: .leading){
-                        Rectangle()
-                            .frame(width: 354, height: 56)
-                            .foregroundColor(.lightGray)
-                            .shadow(radius: 1)
-                            .padding(.leading, 38)
-                        if email.isEmpty{
-                            Text("E-MAIL")
-                                .padding(.leading, 45)
-                                .font(.custom("Helvetica Neue", size: 15))
-                                .fontWeight(.bold)
-                                .textContentType(.name)
-                                .foregroundColor(.placeholderGray)
-                        }
-                        TextField("", text: $email)
-                            .padding(.leading, 45)
-                            .font(.custom("Helvetica Neue", size: 15))
-                            .fontWeight(.bold)
-                            .textContentType(.emailAddress)
-                            .foregroundColor(.darkGray)
-                    }
-                    .padding(.bottom, 14)
-                    
-                    ZStack{
-                        Rectangle()
-                            .frame(width: 354, height: 56)
-                            .foregroundColor(.lightGray)
-                            .shadow(radius: 1)
-                        TextField("Land", text: $country)
-                            .padding(.leading, 45)
-                            .font(.custom("Helvetica Neue", size: 15))
-                            .fontWeight(.bold)
-                            .textContentType(.countryName)
-                            .foregroundColor(.darkGray)
-                    }
-                    .padding(.bottom, 25)
-                    
+                brand.info.headerImage
+                    .resizable()
+                    .scaledToFill()
+                VStack {
+                    Text(brand.info.registerProductSerialNumberText)
+                        .font(.custom("Helvetica Neue", size: 18))
+                        .fontWeight(.medium)
+                        .foregroundColor(.darkGray)
+                    Text("6593794")
+                        .font(.custom("Helvetica Neue", size: 16))
+                        .fontWeight(.regular)
+                        .foregroundColor(.darkGray)
+                }
+                .padding(.bottom)
+                VStack {
+                    Text(brand.info.registerProductProductText)
+                        .font(.custom("Helvetica Neue", size: 18))
+                        .fontWeight(.medium)
+                        .foregroundColor(.darkGray)
+                    Text(brand.info.productName)
+                        .font(.custom("Helvetica Neue", size: 16))
+                        .fontWeight(.regular)
+                        .foregroundColor(.darkGray)
+                }
+                VStack(spacing: 32) {
+                    CustomTextFieldView(
+                        placeholderText: "NAMN",
+                        text: $name
+                    )
+
+                    CustomTextFieldView(
+                        placeholderText: "E-MAIL",
+                        text: $email
+                    )
+
+                    CustomTextFieldView(
+                        placeholderText: "Land",
+                        text: $country
+                    )
+
                     Button(action: {
-                        self.send.toggle()
+                        didTapSend.toggle()
                     }) {
-                        Text("SKICKA")
-                            .frame(width: 354, height: 53)
+                        Text(brand.info.submitButtonText)
+                            .frame(maxWidth: .infinity)
                             .font(.custom("Helveticaneue", size: 15))
                             .fontWeight(.bold)
                             .foregroundColor(.darkGray)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 25)
-                                    .stroke(Color.white, lineWidth: 1)
-                            )
+                            .padding(8)
                     }
-                    .background(Color.lightGray)
-                    .cornerRadius(25)
-                    Spacer()
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color.lightGray)
                 }
-                .opacity(send ? 0 : 1)
-                
+                .padding()
             }
-            .padding(.bottom, 20)
+            .onAppear {
+                withAnimation {
+                    country = brand.info.registerProductCountry
+                }
+            }
+        }
+        .alert(isPresented: $didTapSend) {
+            Alert(
+                title: Text("Produktet er nå registrert!"),
+                message: Text("Du vil nå kunne dra nytte av fordelene ved å registere produktet ditt bla bla bla..."),
+                dismissButton: .default(Text("Ok"), action: {
+                    withAnimation {
+                        name = ""
+                        email = ""
+                    }
+                }))
         }
     }
 }
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView(brand: .shortcut)
     }
 }

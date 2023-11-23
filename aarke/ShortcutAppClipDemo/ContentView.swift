@@ -9,73 +9,13 @@ import SwiftUI
 import UserNotifications
 
 struct ContentView: View {
-    @State var regtister = false
-    @State var language = false
-    let brand: Brand
+    let brand: Brand 
 
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ZStack {
-                        brand.info.headerImage
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.accentColor)
-                            .frame(height: 200)
-                        HStack(alignment: .center){
-                            VStack{
-                                brand.info.logoImage
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding(.leading)
-                                    .offset(y: -100)
-
-                                Button(brand.info.selectedLanguage) {
-                                    language = true
-                                }
-                                .popover(isPresented: $language) {
-                                    LanguageView(brand: brand)
-                                }
-                                .padding(10)
-                                .background(Color(red: 174/255, green: 162/255, blue: 154/255, opacity: 0.72))
-                                .clipShape(Rectangle())
-                                .cornerRadius(10)
-                                .padding(.leading)
-                                .padding(.bottom, 10)
-                                .foregroundColor(.white)
-                                .font(.custom("Avenir Regular", size: 18))
-                                .fontWeight(.bold)
-                            }
-                            Spacer()
-                            NavigationLink(destination: RegisterView(), isActive: $regtister) {EmptyView()
-                            }
-                            //                            .navigationTitle("")
-                            Button(brand.info.registerProductText) {
-                                regtister = true
-                            }
-                            .padding(10)
-                            .background(Color(red: 174/255, green: 162/255, blue: 154/255, opacity: 0.72))
-                            .clipShape(Rectangle())
-                            .cornerRadius(10)
-                            .padding(.trailing, 13)
-                            .foregroundColor(.white)
-                            .font(.custom("Avenir Regular", size: 18))
-                            .fontWeight(.bold)
-                            .offset(y: 49)
-                        }
-                    }
-                    .padding()
-                    .onAppear(){
-                        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                            if success {
-                                print("All set!")
-                            } else if let error = error {
-                                print(error.localizedDescription)
-                            }
-                        }
-                    }
+                    HeaderView(brand: brand)
 
                     HStack {
                         Text(brand.info.subheading)
@@ -123,9 +63,9 @@ struct ContentView: View {
                     })
                     Spacer()
                 }
-                .ignoresSafeArea(.all)
             }
-            .navigationTitle(brand.info.name)
+            .navigationBarBackButtonHidden(true)
+            .ignoresSafeArea(.all)
         }
         .accentColor(.black)
     }

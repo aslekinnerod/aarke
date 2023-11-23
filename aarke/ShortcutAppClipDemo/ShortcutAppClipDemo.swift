@@ -8,18 +8,18 @@
 import SwiftUI
 
 enum Brand: String, CaseIterable {
-    case porsche = "/porsche"
+    case aarke = "/aarke"
     case bmw = "/bmw"
     case shortcut = "/shortcut"
 
     var info: BrandInfo {
         switch self {
-        case .porsche:
-            return BrandInfo(assetFolderName: "porsche", name: "Porsche")
+        case .aarke:
+            return BrandManager.aarke
         case .bmw:
-            return BrandInfo(assetFolderName: "bmw", name: "BMW")
+            return BrandManager.aarke
         case .shortcut:
-            return BrandInfo(assetFolderName: "shortcut", name: "Shortcut")
+            return BrandManager.shortcut
         }
     }
 }
@@ -32,7 +32,7 @@ struct ShortcutAppClipDemo: App {
         WindowGroup {
             Group {
                 if let brand {
-                    ContentView(brand: brand)
+                    ContentView(brand: .aarke)
                 } else {
                     ProgressView()
                 }
