@@ -13,15 +13,30 @@ struct HeadingView: View {
     var title: String
 
     var body: some View {
-        HStack{
-            Spacer()
-            
-            Text(title)
-                .font(.custom("Avenir Black", size: 25))
-                .fontWeight(.bold)
-                .foregroundColor(.darkGray)
-                .padding(.leading, -15)
-            Spacer()
+        ZStack(alignment: .leading) {
+            HStack {
+                Button {
+                    presentation.wrappedValue.dismiss()
+                } label: {
+                    Text(Image(systemName: "chevron.left")
+                        .renderingMode(.original)
+
+                    )
+                    .fontWeight(.medium)
+                    .foregroundColor(.darkGray)
+                    .font(.system(size: 26))
+                    .padding(.leading, 10)
+                }
+            }
+
+            HStack {
+                Spacer()
+                Text(title)
+                    .font(.custom("Avenir Black", size: 25))
+                    .fontWeight(.bold)
+                    .foregroundColor(.darkGray)
+                Spacer()
+            }
         }
     }
 }

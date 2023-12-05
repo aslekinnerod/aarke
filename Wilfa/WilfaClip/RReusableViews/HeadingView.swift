@@ -26,8 +26,6 @@ struct HeadingView: View {
                     .foregroundColor(.darkGray)
                     .font(.system(size: 26))
                     .padding(.leading, 10)
-
-
             }
 
 

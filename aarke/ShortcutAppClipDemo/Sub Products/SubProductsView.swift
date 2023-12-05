@@ -1,10 +1,3 @@
-//
-//  SpareParts.swift
-//  ShortcutAppClipDemo
-//
-//  Created by Asle Kinnerød on 22/11/2022.
-//
-
 import SwiftUI
 
 struct SubProductsView: View {
@@ -12,7 +5,7 @@ struct SubProductsView: View {
 
     var body: some View {
         ScrollView {
-            TopBanner(brand: brand)
+            HeaderView(brand: brand)
             HeadingView(title: brand.info.productInfoHeaderText)
             VStack {
                 ForEach (0..<2) { i in
@@ -26,6 +19,7 @@ struct SubProductsView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
         .ignoresSafeArea(.all)
     }
 }

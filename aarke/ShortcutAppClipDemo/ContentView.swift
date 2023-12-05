@@ -18,6 +18,7 @@ struct ContentView: View {
                     HeaderView(brand: brand)
 
                     HStack {
+                        Spacer()
                         Text(brand.info.subheading)
                             .font(.custom("Avenir Heavy", size: 18))
                             .fontWeight(.semibold)

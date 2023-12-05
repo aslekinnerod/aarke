@@ -13,77 +13,60 @@ struct RegisterView: View {
 
     @State var name: String = ""
     @State var email: String = ""
-    @State var country: String = ""
     @State var didTapSend: Bool = false
 
     var body: some View {
-        ScrollView {
-            VStack {
-                DetailHeaderView(title: "CARBONATOR 3")
-                    .font(.custom("Helvetica neue", size: 25))
-                    .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
-                brand.info.headerImage
-                    .resizable()
-                    .scaledToFill()
+        VStack(spacing: 0) {
+            ScrollView {
                 VStack {
-                    Text(brand.info.registerProductSerialNumberText)
-                        .font(.custom("Helvetica Neue", size: 18))
-                        .fontWeight(.medium)
+                    DetailHeaderView(title: "CARBONATOR 3")
+                        .font(.custom("Helvetica neue", size: 25))
+                        .fontWeight(.bold)
                         .foregroundColor(.darkGray)
-                    Text("6593794")
-                        .font(.custom("Helvetica Neue", size: 16))
-                        .fontWeight(.regular)
-                        .foregroundColor(.darkGray)
-                }
-                .padding(.bottom)
-                VStack {
-                    Text(brand.info.registerProductProductText)
-                        .font(.custom("Helvetica Neue", size: 18))
-                        .fontWeight(.medium)
-                        .foregroundColor(.darkGray)
-                    Text(brand.info.productName)
-                        .font(.custom("Helvetica Neue", size: 16))
-                        .fontWeight(.regular)
-                        .foregroundColor(.darkGray)
-                }
-                VStack(spacing: 32) {
-                    CustomTextFieldView(
-                        placeholderText: "NAMN",
-                        text: $name
-                    )
+                    brand.info.productImage
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxHeight: 350)
 
-                    CustomTextFieldView(
-                        placeholderText: "E-MAIL",
-                        text: $email
-                    )
-
-                    CustomTextFieldView(
-                        placeholderText: "Land",
-                        text: $country
-                    )
-
-                    Button(action: {
-                        didTapSend.toggle()
-                    }) {
-                        Text(brand.info.submitButtonText)
-                            .frame(maxWidth: .infinity)
-                            .font(.custom("Helveticaneue", size: 15))
-                            .fontWeight(.bold)
-                            .foregroundColor(.darkGray)
-                            .padding(8)
+                    HStack(alignment: .center) {
+                        Spacer()
+                        RegisterProductInfoView(
+                            titleText: brand.info.registerProductSerialNumberText,
+                            bodyText: "6593794"
+                        )
+                        Spacer()
+                        RegisterProductInfoView(
+                            titleText: brand.info.registerProductProductText,
+                            bodyText: brand.info.productName
+                        )
+                        Spacer()
+                        RegisterProductInfoView(
+                            titleText: "Land",
+                            bodyText: brand.info.registerProductCountry
+                        )
+                        Spacer()
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(Color.lightGray)
+
+                    VStack(spacing: 16) {
+                        CustomTextFieldView(
+                            placeholderText: "NAMN",
+                            text: $name
+                        )
+
+                        CustomTextFieldView(
+                            placeholderText: "E-MAIL",
+                            text: $email
+                        )
+                    }
+                    .padding(32)
                 }
-                .padding()
             }
-            .onAppear {
-                withAnimation {
-                    country = brand.info.registerProductCountry
-                }
+            CustomButtonView(buttonLabel: brand.info.submitButtonText) {
+                didTapSend.toggle()
             }
-        }
+            .background(Color.clear)
+            .padding(.horizontal, 32)
+        } 
         .alert(isPresented: $didTapSend) {
             Alert(
                 title: Text("Produktet er nå registrert!"),
@@ -94,6 +77,24 @@ struct RegisterView: View {
                         email = ""
                     }
                 }))
+        }
+    }
+}
+
+struct RegisterProductInfoView: View {
+    let titleText: String
+    let bodyText: String
+
+    var body: some View {
+        VStack {
+            Text(titleText)
+                .font(.custom("Helvetica Neue", size: 18))
+                .fontWeight(.medium)
+                .foregroundColor(.darkGray)
+            Text(bodyText)
+                .font(.custom("Helvetica Neue", size: 16))
+                .fontWeight(.regular)
+                .foregroundColor(.darkGray)
         }
     }
 }

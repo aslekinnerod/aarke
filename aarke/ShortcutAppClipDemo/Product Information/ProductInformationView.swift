@@ -12,9 +12,7 @@ struct ProductInformationView: View {
 
     var body: some View {
         VStack{
-            TopBanner(brand: brand)
-                .padding(.bottom, -55)
-                .offset(x: -12)
+            HeaderView(brand: brand)
             HeadingView(title: brand.info.productInfoHeaderText)
                 .padding(.bottom)
 
@@ -32,6 +30,8 @@ struct ProductInformationView: View {
             VideoView(url: brand.info.productInfoVideoURL)
                 .padding(40)
         }
+        .navigationBarBackButtonHidden(true)
+        .ignoresSafeArea(.all)
     }
 }
 

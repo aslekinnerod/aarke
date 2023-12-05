@@ -1,61 +1,6 @@
 import SwiftUI
 
 struct BrandInfo {
-    init(assetFolderName: String, name: String, productName: String, submitButtonText: String, selectedLanguage: String, additionalLanguages: [String], registerProductText: String, subheading: String, userManualText: String, specificationsText: String, productInformationText: String, sparePartsText: String, customerFeedbackText: String, notificationText: String, userManualTitleText: String, userManualProductOverViewText: String, userManualBeforeUseText: String, userManualUserGuideText: String, userManualCleaningText: String, userManualProductOverviewHeaderText: String, userManualProductComponentHeaderText: String, userManualUserGuideViewHeaderText: String, userManualCleaningViewHeaderText: String, specsHeaderText: String, productInfoHeaderText: String, productInfoSubtitle1: String, productInfoBodyText1: String, productInfoSubtitle2: String, productInfoBodyText2: String, subProduct1Title: String, subProduct1Detail: String, subProduct1Price: String, subProduct2Title: String, subProduct2Detail: String, subProduct2Price: String, subProduct3Title: String, subProduct3Detail: String, subProduct3Price: String, subProduct4Title: String, subProduct4Detail: String, subProduct4Price: String, customerFeedbackHeaderText: String, customerFeedbackNameTextFieldPlaceholder: String, customerFeedbackTextEditorTitleText: String, customerFeedbackSubmitButtonText: String, customerFeedbackAlertTitle: String, customerFeedbackAlertMessage: String, registerProductCountry: String, registerProductSerialNumberText: String, registerProductProductText: String, registerProductNamePlaceholderText: String, registerProductEmailPlaceholderText: String) {
-        self.assetFolderName = assetFolderName
-        self.name = name
-        self.productName = productName
-        self.submitButtonText = submitButtonText
-        self.selectedLanguage = selectedLanguage
-        self.additionalLanguages = additionalLanguages
-        self.registerProductText = registerProductText
-        self.subheading = subheading
-        self.userManualText = userManualText
-        self.specificationsText = specificationsText
-        self.productInformationText = productInformationText
-        self.sparePartsText = sparePartsText
-        self.customerFeedbackText = customerFeedbackText
-        self.notificationText = notificationText
-        self.userManualTitleText = userManualTitleText
-        self.userManualProductOverViewText = userManualProductOverViewText
-        self.userManualBeforeUseText = userManualBeforeUseText
-        self.userManualUserGuideText = userManualUserGuideText
-        self.userManualCleaningText = userManualCleaningText
-        self.userManualProductOverviewHeaderText = userManualProductOverviewHeaderText
-        self.userManualProductComponentHeaderText = userManualProductComponentHeaderText
-        self.userManualUserGuideViewHeaderText = userManualUserGuideViewHeaderText
-        self.userManualCleaningViewHeaderText = userManualCleaningViewHeaderText
-        self.specsHeaderText = specsHeaderText
-        self.productInfoHeaderText = productInfoHeaderText
-        self.productInfoSubtitle1 = productInfoSubtitle1
-        self.productInfoBodyText1 = productInfoBodyText1
-        self.productInfoSubtitle2 = productInfoSubtitle2
-        self.productInfoBodyText2 = productInfoBodyText2
-        self.subProduct1Title = subProduct1Title
-        self.subProduct1Detail = subProduct1Detail
-        self.subProduct1Price = subProduct1Price
-        self.subProduct2Title = subProduct2Title
-        self.subProduct2Detail = subProduct2Detail
-        self.subProduct2Price = subProduct2Price
-        self.subProduct3Title = subProduct3Title
-        self.subProduct3Detail = subProduct3Detail
-        self.subProduct3Price = subProduct3Price
-        self.subProduct4Title = subProduct4Title
-        self.subProduct4Detail = subProduct4Detail
-        self.subProduct4Price = subProduct4Price
-        self.customerFeedbackHeaderText = customerFeedbackHeaderText
-        self.customerFeedbackNameTextFieldPlaceholder = customerFeedbackNameTextFieldPlaceholder
-        self.customerFeedbackTextEditorTitleText = customerFeedbackTextEditorTitleText
-        self.customerFeedbackSubmitButtonText = customerFeedbackSubmitButtonText
-        self.customerFeedbackAlertTitle = customerFeedbackAlertTitle
-        self.customerFeedbackAlertMessage = customerFeedbackAlertMessage
-        self.registerProductCountry = registerProductCountry
-        self.registerProductSerialNumberText = registerProductSerialNumberText
-        self.registerProductProductText = registerProductProductText
-        self.registerProductNamePlaceholderText = registerProductNamePlaceholderText
-        self.registerProductEmailPlaceholderText = registerProductEmailPlaceholderText
-    }
-
     let assetFolderName: String
     let name: String
     let productName: String
@@ -63,12 +8,16 @@ struct BrandInfo {
     // MARK: - Shared Constants
     let submitButtonText: String
 
-    // MARK: - Parent View
+    // MARK: - Images
     var headerImage: Image {
         Image("\(assetFolderName)/header-image")
     }
     var logoImage: Image {
         Image("\(assetFolderName)/logo")
+    }
+
+    var productImage: Image {
+        Image("\(assetFolderName)/product-image")
     }
 
     // Language
@@ -90,10 +39,6 @@ struct BrandInfo {
 
     // MARK: - User Manual View
     let userManualTitleText: String
-    let userManualProductOverViewText: String
-    let userManualBeforeUseText: String
-    let userManualUserGuideText: String
-    let userManualCleaningText: String
 
     // Product Overview
     let userManualProductOverviewHeaderText: String
@@ -207,4 +152,55 @@ struct BrandInfo {
     let registerProductProductText: String
     let registerProductNamePlaceholderText: String
     let registerProductEmailPlaceholderText: String
+
+    init(assetFolderName: String, name: String, productName: String, submitButtonText: String, selectedLanguage: String, additionalLanguages: [String], registerProductText: String, subheading: String, userManualText: String, specificationsText: String, productInformationText: String, sparePartsText: String, customerFeedbackText: String, notificationText: String, userManualTitleText: String, userManualProductOverViewText: String, userManualBeforeUseText: String, userManualUserGuideText: String, userManualCleaningText: String, userManualProductOverviewHeaderText: String, userManualProductComponentHeaderText: String, userManualUserGuideViewHeaderText: String, userManualCleaningViewHeaderText: String, specsHeaderText: String, productInfoHeaderText: String, productInfoSubtitle1: String, productInfoBodyText1: String, productInfoSubtitle2: String, productInfoBodyText2: String, subProduct1Title: String, subProduct1Detail: String, subProduct1Price: String, subProduct2Title: String, subProduct2Detail: String, subProduct2Price: String, subProduct3Title: String, subProduct3Detail: String, subProduct3Price: String, subProduct4Title: String, subProduct4Detail: String, subProduct4Price: String, customerFeedbackHeaderText: String, customerFeedbackNameTextFieldPlaceholder: String, customerFeedbackTextEditorTitleText: String, customerFeedbackSubmitButtonText: String, customerFeedbackAlertTitle: String, customerFeedbackAlertMessage: String, registerProductCountry: String, registerProductSerialNumberText: String, registerProductProductText: String, registerProductNamePlaceholderText: String, registerProductEmailPlaceholderText: String) {
+        self.assetFolderName = assetFolderName
+        self.name = name
+        self.productName = productName
+        self.submitButtonText = submitButtonText
+        self.selectedLanguage = selectedLanguage
+        self.additionalLanguages = additionalLanguages
+        self.registerProductText = registerProductText
+        self.subheading = subheading
+        self.userManualText = userManualText
+        self.specificationsText = specificationsText
+        self.productInformationText = productInformationText
+        self.sparePartsText = sparePartsText
+        self.customerFeedbackText = customerFeedbackText
+        self.notificationText = notificationText
+        self.userManualTitleText = userManualTitleText
+        self.userManualProductOverviewHeaderText = userManualProductOverviewHeaderText
+        self.userManualProductComponentHeaderText = userManualProductComponentHeaderText
+        self.userManualUserGuideViewHeaderText = userManualUserGuideViewHeaderText
+        self.userManualCleaningViewHeaderText = userManualCleaningViewHeaderText
+        self.specsHeaderText = specsHeaderText
+        self.productInfoHeaderText = productInfoHeaderText
+        self.productInfoSubtitle1 = productInfoSubtitle1
+        self.productInfoBodyText1 = productInfoBodyText1
+        self.productInfoSubtitle2 = productInfoSubtitle2
+        self.productInfoBodyText2 = productInfoBodyText2
+        self.subProduct1Title = subProduct1Title
+        self.subProduct1Detail = subProduct1Detail
+        self.subProduct1Price = subProduct1Price
+        self.subProduct2Title = subProduct2Title
+        self.subProduct2Detail = subProduct2Detail
+        self.subProduct2Price = subProduct2Price
+        self.subProduct3Title = subProduct3Title
+        self.subProduct3Detail = subProduct3Detail
+        self.subProduct3Price = subProduct3Price
+        self.subProduct4Title = subProduct4Title
+        self.subProduct4Detail = subProduct4Detail
+        self.subProduct4Price = subProduct4Price
+        self.customerFeedbackHeaderText = customerFeedbackHeaderText
+        self.customerFeedbackNameTextFieldPlaceholder = customerFeedbackNameTextFieldPlaceholder
+        self.customerFeedbackTextEditorTitleText = customerFeedbackTextEditorTitleText
+        self.customerFeedbackSubmitButtonText = customerFeedbackSubmitButtonText
+        self.customerFeedbackAlertTitle = customerFeedbackAlertTitle
+        self.customerFeedbackAlertMessage = customerFeedbackAlertMessage
+        self.registerProductCountry = registerProductCountry
+        self.registerProductSerialNumberText = registerProductSerialNumberText
+        self.registerProductProductText = registerProductProductText
+        self.registerProductNamePlaceholderText = registerProductNamePlaceholderText
+        self.registerProductEmailPlaceholderText = registerProductEmailPlaceholderText
+    }
 }

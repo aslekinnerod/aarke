@@ -1,23 +1,16 @@
-//
-//  ShortcutAppClipDemoApp.swift
-//  ShortcutAppClipDemo
-//
-//  Created by Asle Kinnerød on 21/11/2022.
-//
-
 import SwiftUI
 
 enum Brand: String, CaseIterable {
     case aarke = "/aarke"
-    case bmw = "/bmw"
+    case wilfa = "/wilfa"
     case shortcut = "/shortcut"
 
     var info: BrandInfo {
         switch self {
         case .aarke:
             return BrandManager.aarke
-        case .bmw:
-            return BrandManager.aarke
+        case .wilfa:
+            return BrandManager.wilfa
         case .shortcut:
             return BrandManager.shortcut
         }

@@ -19,6 +19,7 @@ struct HeaderView: View {
                 .resizable()
                 .scaledToFill()
                 .foregroundColor(.accentColor)
+                .frame(width: UIScreen.main.bounds.width)
             HStack {
                 VStack(alignment: .leading) {
                     brand.info.logoImage
@@ -26,7 +27,7 @@ struct HeaderView: View {
                         .scaledToFit()
                         .frame(width: 100, height: 100)
                         .padding(.leading)
-                        .padding(.top, 24)
+                        .padding(.top, 100)
 
                     Spacer()
 
@@ -81,5 +82,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView(brand: .aarke)
+    HeaderView(brand: .wilfa)
 }

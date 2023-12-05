@@ -12,8 +12,7 @@ struct SpecsView: View {
 
     var body: some View {
         VStack{
-            TopBanner(brand: brand)
-                .padding(.bottom, -60)
+            HeaderView(brand: brand)
             HeadingView(title: brand.info.specsHeaderText)
 
             brand.info.specsImage
@@ -21,6 +20,8 @@ struct SpecsView: View {
                 .scaledToFit()
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
+        .ignoresSafeArea(.all)
     }
 }
 

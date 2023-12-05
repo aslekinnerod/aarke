@@ -39,7 +39,7 @@ struct CustomerFeedBackView: View {
                             .foregroundColor(.lightGray)
                             .shadow(radius: 1)
                             .padding(.leading, 38)
-                        if name.isEmpty{
+                        if name.isEmpty {
                             Text("NAVN")
                                 .padding(.leading, 45)
                                 .font(.custom("Helvetica Neue", size: 15))

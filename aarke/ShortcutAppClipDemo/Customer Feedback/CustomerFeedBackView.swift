@@ -18,7 +18,7 @@ struct CustomerFeedBackView: View {
 
     var body: some View {
         ScrollView {
-            TopBanner(brand: brand)
+            HeaderView(brand: brand)
             HeadingView(title: brand.info.customerFeedbackHeaderText)
 
             ZStack{
@@ -28,54 +28,26 @@ struct CustomerFeedBackView: View {
                         Spacer()
                     }
 
-                    CustomTextFieldView(
-                        placeholderText: brand.info.customerFeedbackNameTextFieldPlaceholder,
-                        text: $name
-                    )
+                    VStack(spacing: 14) {
+                        CustomTextFieldView(
+                            placeholderText: brand.info.customerFeedbackNameTextFieldPlaceholder,
+                            text: $name
+                        )
 
-                    VStack() {
-                        HStack {
-                            Text(brand.info.customerFeedbackTextEditorTitleText)
-                                .font(.custom("Helvetica Neue", size: 15))
-                                .fontWeight(.bold)
-                                .foregroundColor(.placeholderGray)
-                            Spacer()
+                        CustomTextEditorView(
+                            placeholderText: brand.info.customerFeedbackTextEditorTitleText,
+                            text: $description
+                        )
+                    }
+
+                    CustomButtonView(buttonLabel: brand.info.customerFeedbackSubmitButtonText) {
+                            didTapSend = true
                         }
-
-                        TextEditor(text: $description)
-                            .frame(height: 200)
-                            .padding(.horizontal)
-                            .padding(.top)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color(.lightGray), lineWidth: 2)
-                            )
-                            .textContentType(.name)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(0)
-                            .submitLabel(.done)
-                    }
-                    .padding(.top)
-
-
-                    Button(action: {
-                        didTapSend = true
-                    }) {
-                        Text(brand.info.customerFeedbackSubmitButtonText)
-                            .frame(maxWidth: .infinity)
-                            .font(.custom("Helveticaneue", size: 15))
-                            .fontWeight(.bold)
-                            .foregroundColor(.darkGray)
-                            .padding(8)
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(Color.lightGray)
-                    .padding(.top, 30)
-                    Spacer()
                 }
                 .padding()
             }
         }
+        .navigationBarBackButtonHidden(true)
         .ignoresSafeArea(.all)
         .alert(isPresented: $didTapSend) {
             Alert(

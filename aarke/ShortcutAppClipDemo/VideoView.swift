@@ -14,23 +14,23 @@ struct VideoView: View {
         VideoViewProvider(url: url)
             .ignoresSafeArea()
             .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                                .onEnded({ value in
-                                    if value.translation.width < 0 {
-                                        @Environment(\.presentationMode) var presentation
-                                    }
+                .onEnded({ value in
+                    if value.translation.width < 0 {
+                        @Environment(\.presentationMode) var presentation
+                    }
 
-                                    if value.translation.width > 0 {
-                                        // right
-                                    }
-                                    if value.translation.height < 0 {
-                                        // up
-                                    }
+                    if value.translation.width > 0 {
+                        // right
+                    }
+                    if value.translation.height < 0 {
+                        // up
+                    }
 
-                                    if value.translation.height > 0 {
-                                        // down
-                                        @Environment(\.presentationMode) var presentation
-                                    }
-                                }))
+                    if value.translation.height > 0 {
+                        // down
+                        @Environment(\.presentationMode) var presentation
+                    }
+                }))
     }
 }
 
