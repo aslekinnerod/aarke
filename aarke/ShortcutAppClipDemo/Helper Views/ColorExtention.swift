@@ -1,10 +1,3 @@
-//
-//  ColorExtention.swift
-//  ShortcutAppClipDemo
-//
-//  Created by Asle Kinnerød on 24/11/2022.
-//
-
 import SwiftUI
 
 extension Color {

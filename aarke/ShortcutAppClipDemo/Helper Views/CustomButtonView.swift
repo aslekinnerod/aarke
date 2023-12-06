@@ -1,10 +1,3 @@
-//
-//  CustomButtonView.swift
-//  ShortcutDemoClip
-//
-//  Created by Eric Davis on 04/12/2023.
-//
-
 import SwiftUI
 
 struct CustomButtonView: View {

@@ -1,10 +1,3 @@
-//
-//  CustomerFeedBackView.swift
-//  ShortcutAppClipDemo
-//
-//  Created by Asle Kinnerød on 23/11/2022.
-//
-
 import SwiftUI
 
 struct CustomerFeedBackView: View {
@@ -17,40 +10,44 @@ struct CustomerFeedBackView: View {
     @State private var didTap = false
 
     var body: some View {
-        ScrollView {
-            HeaderView(brand: brand)
-            HeadingView(
-                brand: brand,
-                title: brand.info.customerFeedbackHeaderText
-            )
+        VStack(spacing: 0) {
+            ScrollView {
+                HeaderView(brand: brand)
+                HeadingView(
+                    brand: brand,
+                    title: brand.info.customerFeedbackHeaderText
+                )
 
-            ZStack{
-                VStack(spacing: 24) {
-                    HStack {
-                        RatingView(rating: $rating)
-                        Spacer()
-                    }
-
-                    VStack(spacing: 14) {
-                        CustomTextFieldView(
-                            brand: brand,
-                            placeholderText: brand.info.customerFeedbackNameTextFieldPlaceholder,
-                            text: $name
-                        )
-
-                        CustomTextEditorView(
-                            brand: brand,
-                            placeholderText: brand.info.customerFeedbackTextEditorTitleText,
-                            text: $description
-                        )
-                    }
-
-                    CustomButtonView(brand: brand, buttonLabel: brand.info.customerFeedbackSubmitButtonText) {
-                            didTapSend = true
+                ZStack{
+                    VStack(spacing: 12) {
+                        HStack {
+                            RatingView(rating: $rating)
+                            Spacer()
                         }
+
+                        VStack(spacing: 14) {
+                            CustomTextFieldView(
+                                brand: brand,
+                                placeholderText: brand.info.customerFeedbackNameTextFieldPlaceholder,
+                                text: $name
+                            )
+
+                            CustomTextEditorView(
+                                brand: brand,
+                                placeholderText: brand.info.customerFeedbackTextEditorTitleText,
+                                text: $description
+                            )
+                        }
+                    }
                 }
                 .padding()
             }
+
+            CustomButtonView(brand: brand, buttonLabel: brand.info.customerFeedbackSubmitButtonText) {
+                didTapSend = true
+            }
+            .padding(.horizontal)
+            .padding(.bottom, 32)
         }
         .navigationBarBackButtonHidden(true)
         .ignoresSafeArea(.all)

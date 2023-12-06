@@ -9,7 +9,7 @@ struct CustomTextEditorView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             TextEditor(text: $text)
-                .frame(height: 200)
+                .frame(height: 150)
                 .padding(10)
                 .scrollContentBackground(.hidden)
                 .background(brand.info.secondaryColor)

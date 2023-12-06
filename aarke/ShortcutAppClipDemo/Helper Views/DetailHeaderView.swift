@@ -1,10 +1,3 @@
-//
-//  DetailHeaderView.swift
-//  ShortcutAppClipDemo
-//
-//  Created by Asle Kinnerød on 23/11/2022.
-//
-
 import SwiftUI
 
 struct DetailHeaderView: View {
