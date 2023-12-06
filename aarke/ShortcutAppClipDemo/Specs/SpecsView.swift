@@ -13,7 +13,10 @@ struct SpecsView: View {
     var body: some View {
         VStack{
             HeaderView(brand: brand)
-            HeadingView(title: brand.info.specsHeaderText)
+            HeadingView(
+                brand: brand,
+                title: brand.info.specsHeaderText
+            )
 
             brand.info.specsImage
                 .resizable()

@@ -20,6 +20,23 @@ struct BrandInfo {
         Image("\(assetFolderName)/product-image")
     }
 
+    // MARK: - Colors
+    var primaryColor: Color {
+        Color("\(assetFolderName)/color-primary")
+    }
+
+    var secondaryColor: Color {
+        Color("\(assetFolderName)/color-secondary")
+    }
+
+    var textColor: Color {
+        Color("\(assetFolderName)/color-text")
+    }
+
+    var buttonTextColor: Color {
+        Color("\(assetFolderName)/color-button-text")
+    }
+
     // Language
     let selectedLanguage: String
     let additionalLanguages: [String]

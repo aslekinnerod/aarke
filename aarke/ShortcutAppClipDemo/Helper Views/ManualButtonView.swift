@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct ManualButtonView: View {
+    let brand: Brand
     var title: String
     
     var body: some View {
         ZStack{
             Rectangle()
                 .frame(width: 311, height: 75)
-                .foregroundColor(.buttonGray)
+                .foregroundColor(brand.info.secondaryColor)
                 .cornerRadius(5)
                 
                
             
             Text(title)
-                .foregroundColor(.black)
+                .foregroundColor(brand.info.textColor)
                 .font(.custom("Avenir Heavy", size: 20))
                 .fontWeight(.bold)
         }
@@ -29,6 +30,6 @@ struct ManualButtonView: View {
 
 struct ManualButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ManualButtonView(title: "Produktöversikt")
+        ManualButtonView(brand: .aarke, title: "Produktöversikt")
     }
 }

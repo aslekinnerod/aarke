@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CustomButtonView: View {
+    let brand: Brand
     var buttonLabel: String
     var action: (() -> Void)
 
@@ -17,18 +18,18 @@ struct CustomButtonView: View {
                 .frame(maxWidth: .infinity)
                 .font(.custom("Helveticaneue", size: 15))
                 .fontWeight(.bold)
-                .foregroundColor(.darkGray)
+                .foregroundColor(brand.info.buttonTextColor)
                 .padding(8)
         }
         .buttonStyle(.borderedProminent)
         .clipShape(Capsule())
-        .tint(Color.lightGray)
+        .tint(brand.info.primaryColor)
         .background(Color.clear)
     }
 }
 
 #Preview {
-    CustomButtonView(buttonLabel: "Label") {
+    CustomButtonView(brand: .aarke, buttonLabel: "Label") {
         print("Hello")
     }
 }

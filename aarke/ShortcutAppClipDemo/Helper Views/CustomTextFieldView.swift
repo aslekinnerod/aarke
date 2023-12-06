@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CustomTextFieldView: View {
+    let brand: Brand
     let placeholderText: String
     @Binding var text: String
 
@@ -9,7 +10,7 @@ struct CustomTextFieldView: View {
             TextField("", text: $text)
                 .padding()
                 .frame(height: 56)
-                .background(Color(.systemGray5))
+                .background(brand.info.secondaryColor)
                 .clipShape(RoundedRectangle(cornerRadius: 6))
                 .textContentType(.name)
                 .disableAutocorrection(true)
@@ -27,6 +28,7 @@ struct CustomTextFieldView: View {
 
 #Preview {
     CustomTextFieldView(
+        brand: .aarke,
         placeholderText: "Placeholder",
         text: .constant("This is some text")
     )

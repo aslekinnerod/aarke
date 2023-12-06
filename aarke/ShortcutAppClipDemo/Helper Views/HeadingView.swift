@@ -10,6 +10,7 @@ import SwiftUI
 struct HeadingView: View {
     @Environment(\.presentationMode) var presentation
     
+    let brand: Brand
     var title: String
 
     var body: some View {
@@ -23,7 +24,7 @@ struct HeadingView: View {
 
                     )
                     .fontWeight(.medium)
-                    .foregroundColor(.darkGray)
+                    .foregroundColor(brand.info.textColor)
                     .font(.system(size: 26))
                     .padding(.leading, 10)
                 }
@@ -34,7 +35,7 @@ struct HeadingView: View {
                 Text(title)
                     .font(.custom("Avenir Black", size: 25))
                     .fontWeight(.bold)
-                    .foregroundColor(.darkGray)
+                    .foregroundColor(brand.info.textColor)
                 Spacer()
             }
         }
@@ -43,6 +44,6 @@ struct HeadingView: View {
 
 struct HeadingView_Previews: PreviewProvider {
     static var previews: some View {
-        HeadingView(title: "RESERVEDELER")
+        HeadingView(brand: .aarke, title: "RESERVEDELER")
     }
 }

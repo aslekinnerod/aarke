@@ -22,7 +22,7 @@ struct RegisterView: View {
                     DetailHeaderView(title: "CARBONATOR 3")
                         .font(.custom("Helvetica neue", size: 25))
                         .fontWeight(.bold)
-                        .foregroundColor(.darkGray)
+                        .foregroundColor(brand.info.textColor)
                     brand.info.productImage
                         .resizable()
                         .scaledToFit()
@@ -31,16 +31,19 @@ struct RegisterView: View {
                     HStack(alignment: .center) {
                         Spacer()
                         RegisterProductInfoView(
+                            brand: brand,
                             titleText: brand.info.registerProductSerialNumberText,
                             bodyText: "6593794"
                         )
                         Spacer()
                         RegisterProductInfoView(
+                            brand: brand,
                             titleText: brand.info.registerProductProductText,
                             bodyText: brand.info.productName
                         )
                         Spacer()
                         RegisterProductInfoView(
+                            brand: brand,
                             titleText: "Land",
                             bodyText: brand.info.registerProductCountry
                         )
@@ -49,11 +52,13 @@ struct RegisterView: View {
 
                     VStack(spacing: 16) {
                         CustomTextFieldView(
+                            brand: brand,
                             placeholderText: "NAMN",
                             text: $name
                         )
 
                         CustomTextFieldView(
+                            brand: brand,
                             placeholderText: "E-MAIL",
                             text: $email
                         )
@@ -61,12 +66,12 @@ struct RegisterView: View {
                     .padding(32)
                 }
             }
-            CustomButtonView(buttonLabel: brand.info.submitButtonText) {
+            CustomButtonView(brand: brand, buttonLabel: brand.info.submitButtonText) {
                 didTapSend.toggle()
             }
             .background(Color.clear)
             .padding(.horizontal, 32)
-        } 
+        }
         .alert(isPresented: $didTapSend) {
             Alert(
                 title: Text("Produktet er nå registrert!"),
@@ -82,6 +87,7 @@ struct RegisterView: View {
 }
 
 struct RegisterProductInfoView: View {
+    let brand: Brand
     let titleText: String
     let bodyText: String
 
@@ -90,11 +96,11 @@ struct RegisterProductInfoView: View {
             Text(titleText)
                 .font(.custom("Helvetica Neue", size: 18))
                 .fontWeight(.medium)
-                .foregroundColor(.darkGray)
+                .foregroundColor(brand.info.textColor)
             Text(bodyText)
                 .font(.custom("Helvetica Neue", size: 16))
                 .fontWeight(.regular)
-                .foregroundColor(.darkGray)
+                .foregroundColor(brand.info.textColor)
         }
     }
 }

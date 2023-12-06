@@ -8,29 +8,30 @@
 import SwiftUI
 
 struct CellView: View {
+    let brand: Brand
     var title: String
 
     var body: some View {
-        ZStack{
+        ZStack {
             Rectangle()
                 .frame(width: 311, height: 75)
-                .foregroundColor(.buttonGray)
+                .foregroundColor(brand.info.secondaryColor)
                 .cornerRadius(5)
                 
                 Text(title)
                     .font(.custom("Avenir Heavy", size: 18))
                     .fontWeight(.bold)
-                    .foregroundColor(.black)
-                
-          
+                    .foregroundColor(brand.info.textColor)
         }
-        .padding([.trailing, .leading])
-        
+        .padding(.horizontal)
     }
 }
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(title: "Produktinformation")
+        CellView(
+            brand: .aarke,
+            title: "Produktinformation"
+        )
     }
 }

@@ -22,31 +22,31 @@ struct ContentView: View {
                         Text(brand.info.subheading)
                             .font(.custom("Avenir Heavy", size: 18))
                             .fontWeight(.semibold)
-                            .foregroundColor(.textGray)
+                            .foregroundColor(brand.info.textColor)
                         Spacer()
                     }
                     .padding()
 
                     NavigationLink(destination: UsermanualView(brand: brand)){
-                        CellView(title: brand.info.userManualText)
+                        CellView(brand: brand, title: brand.info.userManualText)
                     }
 
                     NavigationLink(destination: SpecsView(brand: brand)){
-                        CellView(title: brand.info.specificationsText)
+                        CellView(brand: brand, title: brand.info.specificationsText)
                     }
 
                     NavigationLink(destination: ProductInformationView(brand: brand)){
-                        CellView(title: brand.info.productInformationText)
+                        CellView(brand: brand, title: brand.info.productInformationText)
                     }
 
                     NavigationLink(destination: SubProductsView(brand: brand)){
-                        CellView(title: brand.info.sparePartsText)
+                        CellView(brand: brand, title: brand.info.sparePartsText)
                     }
 
                     NavigationLink(destination: CustomerFeedBackView(brand: brand)){
-                        CellView(title: brand.info.customerFeedbackText)
-
+                        CellView(brand: brand, title: brand.info.customerFeedbackText)
                     }
+                    .padding(.bottom, 48)
                     .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification), perform: { output in
                         let content = UNMutableNotificationContent()
                         content.title = brand.info.name

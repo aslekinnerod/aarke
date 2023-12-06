@@ -6,13 +6,17 @@ struct SubProductsView: View {
     var body: some View {
         ScrollView {
             HeaderView(brand: brand)
-            HeadingView(title: brand.info.productInfoHeaderText)
+            HeadingView(
+                brand: brand,
+                title: brand.info.productInfoHeaderText
+            )
+
             VStack {
                 ForEach (0..<2) { i in
                     HStack {
                         ForEach (0..<2) { j in
                             let index = i + j + (i*2)
-                            SparePartView(subProduct: brand.info.subProducts[index])
+                            SparePartView(brand: brand, subProduct: brand.info.subProducts[index])
                         }
                     }
                     .padding(0)

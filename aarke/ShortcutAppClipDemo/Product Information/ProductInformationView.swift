@@ -11,9 +11,12 @@ struct ProductInformationView: View {
     let brand: Brand
 
     var body: some View {
-        VStack{
+        VStack {
             HeaderView(brand: brand)
-            HeadingView(title: brand.info.productInfoHeaderText)
+            HeadingView(
+                brand: brand,
+                title: brand.info.productInfoHeaderText
+            )
                 .padding(.bottom)
 
             ParagraphTextView(
@@ -32,6 +35,7 @@ struct ProductInformationView: View {
         }
         .navigationBarBackButtonHidden(true)
         .ignoresSafeArea(.all)
+        .foregroundStyle(brand.info.textColor)
     }
 }
 
@@ -50,11 +54,9 @@ struct ParagraphTextView: View {
             Text(title)
                 .font(.custom("Helvetica Neue", size: 18))
                 .fontWeight(.bold)
-                .foregroundColor(.darkGray)
                 .padding(.bottom, 5)
             Text(subtitle)
                 .font(.custom("Helvetica Neue", size: 15))
-                .foregroundColor(.textGray)
         }
         .padding(.horizontal)
     }

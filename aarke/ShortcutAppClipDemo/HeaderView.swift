@@ -1,10 +1,3 @@
-//
-//  HeaderView.swift
-//  ShortcutDemoClip
-//
-//  Created by Eric Davis on 21/11/2023.
-//
-
 import SwiftUI
 
 struct HeaderView: View {
@@ -18,7 +11,6 @@ struct HeaderView: View {
             brand.info.headerImage
                 .resizable()
                 .scaledToFill()
-                .foregroundColor(.accentColor)
                 .frame(width: UIScreen.main.bounds.width)
             HStack {
                 VStack(alignment: .leading) {
@@ -27,7 +19,7 @@ struct HeaderView: View {
                         .scaledToFit()
                         .frame(width: 100, height: 100)
                         .padding(.leading)
-                        .padding(.top, 100)
+                        .padding(.top, 32)
 
                     Spacer()
 
@@ -39,10 +31,10 @@ struct HeaderView: View {
                             LanguageView(brand: brand)
                         }
                         .padding(10)
-                        .background(Color(red: 174/255, green: 162/255, blue: 154/255, opacity: 0.72))
+                        .background(brand.info.primaryColor.opacity(0.72))
                         .clipShape(Rectangle())
                         .cornerRadius(10)
-                        .foregroundColor(.white)
+                        .foregroundColor(brand.info.buttonTextColor)
                         .font(.custom("Avenir Regular", size: 18))
                         .fontWeight(.bold)
 
@@ -52,10 +44,10 @@ struct HeaderView: View {
                             register = true
                         }
                         .padding(10)
-                        .background(Color(red: 174/255, green: 162/255, blue: 154/255, opacity: 0.72))
+                        .background(brand.info.primaryColor.opacity(0.72))
                         .clipShape(Rectangle())
                         .cornerRadius(10)
-                        .foregroundColor(.white)
+                        .foregroundColor(brand.info.buttonTextColor)
                         .font(.custom("Avenir Regular", size: 18))
                         .fontWeight(.bold)
                     }
@@ -82,5 +74,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView(brand: .wilfa)
+    HeaderView(brand: .aarke)
 }

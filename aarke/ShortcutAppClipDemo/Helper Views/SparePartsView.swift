@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct SparePartView: View {
+    let brand: Brand
     let subProduct: SubProduct
-//    var image: Image
-//    var title: String
-//    var detail: String
-//    var price: String
-
 
     var body: some View {
         ZStack {
@@ -21,8 +17,8 @@ struct SparePartView: View {
                 .cornerRadius(5)
                 .foregroundColor(.white)
                 .overlay(
-                      RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.darkGray, lineWidth: 1)
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(brand.info.primaryColor, lineWidth: 1)
                   )
             VStack {
                 subProduct.image
@@ -31,11 +27,12 @@ struct SparePartView: View {
                 VStack(alignment: .leading){
                     Text(subProduct.title)
                         .font(.custom("Avenir Heavy", size: 16))
-                        .padding([.leading, .trailing])
+                        .padding(.horizontal)
                         .padding(.bottom, 0.3)
                     Text(subProduct.detail)
                         .font(.custom("Avenir Heavy", size: 12))
-                        .padding([.leading, .trailing, .bottom])
+                        .padding(.horizontal)
+                        .padding(.bottom)
                     HStack {
                         Circle()
                             .frame(width: 12, height: 12)
@@ -47,20 +44,18 @@ struct SparePartView: View {
                     .padding([.leading, .trailing])
                     Text(subProduct.price)
                         .font(.custom("Helvetica_Neue", size: 12))
-                        .padding([.leading, .trailing])
+                        .padding(.horizontal)
                 }
             }
-
+            .foregroundStyle(brand.info.textColor)
         }
         .frame(width: 160, height: 280)
-//        .navigationBarBackButtonHidden(true)
         .padding(7)
-
     }
 }
 
 struct SparePartsView_Previews: PreviewProvider {
     static var previews: some View {
-        SparePartView(subProduct: SubProduct(image: Image(systemName: "person"), title: "PERFORMANCE KANNE MED LOKK", detail: "Reservedel WSPL-3B", price: "399,-"))
+        SparePartView(brand: .aarke, subProduct: SubProduct(image: Image(systemName: "person"), title: "PERFORMANCE KANNE MED LOKK", detail: "Reservedel WSPL-3B", price: "399,-"))
     }
 }

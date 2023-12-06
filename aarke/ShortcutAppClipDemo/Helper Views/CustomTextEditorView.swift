@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CustomTextEditorView: View {
+    let brand: Brand
     let placeholderText: String
     @Binding var text: String
 
@@ -11,7 +12,7 @@ struct CustomTextEditorView: View {
                 .frame(height: 200)
                 .padding(10)
                 .scrollContentBackground(.hidden)
-                .background(Color(.systemGray5))
+                .background(brand.info.secondaryColor)
                 .clipShape(RoundedRectangle(cornerRadius: 6))
                 .textContentType(.name)
                 .multilineTextAlignment(.leading)
@@ -31,6 +32,7 @@ struct CustomTextEditorView: View {
 
 #Preview {
     CustomTextEditorView(
+        brand: .aarke,
         placeholderText: "Placeholder Text",
         text: .constant("Text")
     )

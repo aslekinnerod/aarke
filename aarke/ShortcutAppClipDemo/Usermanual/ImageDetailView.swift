@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ImageDetailView: View {
+    let brand: Brand
     let title: String
     let image: Image
 
@@ -23,11 +24,16 @@ struct ImageDetailView: View {
         }
         .frame(width: UIScreen.main.bounds.width)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .foregroundStyle(brand.info.textColor)
     }
 }
 
 struct ProductOverView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageDetailView(title: "Title", image: Image(systemName: "person"))
+        ImageDetailView(
+            brand: .shortcut,
+            title: "Title",
+            image: Image(systemName: "person")
+        )
     }
 }

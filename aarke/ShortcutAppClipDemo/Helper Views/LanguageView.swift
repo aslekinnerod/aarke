@@ -18,7 +18,7 @@ struct LanguageView: View {
                 .padding(.bottom)
 
             ZStack{
-                RectangleView()
+                RectangleView(brand: brand)
                 HStack {
                     Text("Svenska")
                     Text(Image(systemName: "checkmark"))
@@ -27,22 +27,24 @@ struct LanguageView: View {
 
             ForEach(brand.info.additionalLanguages, id: \.self) { language in
                 ZStack{
-                    RectangleView()
+                    RectangleView(brand: brand)
                     Text(language)
                 }
             }
         }
         .font(.custom("Avenir Heavy", size: 18))
         .fontWeight(.bold)
-        .foregroundColor(.darkGray)
+        .foregroundColor(brand.info.textColor)
     }
 }
 
 struct RectangleView: View {
+    let brand: Brand
+
     var body: some View {
         Rectangle()
             .frame(width: 354, height: 56)
-            .foregroundColor(Color.lightGray)
+            .foregroundColor(brand.info.secondaryColor)
             .cornerRadius(5)
     }
 }

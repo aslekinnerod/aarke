@@ -19,7 +19,10 @@ struct CustomerFeedBackView: View {
     var body: some View {
         ScrollView {
             HeaderView(brand: brand)
-            HeadingView(title: brand.info.customerFeedbackHeaderText)
+            HeadingView(
+                brand: brand,
+                title: brand.info.customerFeedbackHeaderText
+            )
 
             ZStack{
                 VStack(spacing: 24) {
@@ -30,17 +33,19 @@ struct CustomerFeedBackView: View {
 
                     VStack(spacing: 14) {
                         CustomTextFieldView(
+                            brand: brand,
                             placeholderText: brand.info.customerFeedbackNameTextFieldPlaceholder,
                             text: $name
                         )
 
                         CustomTextEditorView(
+                            brand: brand,
                             placeholderText: brand.info.customerFeedbackTextEditorTitleText,
                             text: $description
                         )
                     }
 
-                    CustomButtonView(buttonLabel: brand.info.customerFeedbackSubmitButtonText) {
+                    CustomButtonView(brand: brand, buttonLabel: brand.info.customerFeedbackSubmitButtonText) {
                             didTapSend = true
                         }
                 }
