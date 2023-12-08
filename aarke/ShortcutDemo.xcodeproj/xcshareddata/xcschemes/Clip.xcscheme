@@ -52,7 +52,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCAppClipURL"
-            value = "https://shortcut-demo-2dad5.web.app/shortcut"
+            value = "https://shortcut-demo-2dad5.web.app/shortcut/subproducts"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct UsermanualView: View {
+struct UserManualView: View {
     let brand: Brand
 
     var body: some View {
@@ -51,6 +51,6 @@ struct UsermanualView: View {
 
 struct UsermanualView_Previews: PreviewProvider {
     static var previews: some View {
-        UsermanualView(brand: .shortcut)
+        UserManualView(brand: .shortcut)
     }
 }

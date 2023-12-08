@@ -20,5 +20,194 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "handleURL(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3 - 25cb92c9bd22b85f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3 - 25cb92c9bd22b83e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1096">
+               </Location>
+               <Location
+                  uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3 - 25cb92c9bd22b83e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D435144-057F-4E11-B3C2-F495811CC830"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "handleURL(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D435144-057F-4E11-B3C2-F495811CC830 - 25cb92c9bd22b9c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "664">
+               </Location>
+               <Location
+                  uuid = "8D435144-057F-4E11-B3C2-F495811CC830 - 25cb92c9bd22b9ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "8D435144-057F-4E11-B3C2-F495811CC830 - 25cb92c9bd22b9ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "664">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "handleURL(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892 - 25cb92c9bd22bff8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892 - 25cb92c9bd22bff8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1512">
+               </Location>
+               <Location
+                  uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892 - 25cb92c9bd22bff8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1496">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
