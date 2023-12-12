@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B18E15C6-4283-4A0F-A3B6-317A57945F9F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2138C52A-7331-4E09-8EF4-C1592117F0EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShortcutAppClipDemo/Usermanual/BeforeUseView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShortcutAppClipDemo/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9 - 41e86df6af002bbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Foundation.Notification) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in ShortcutDemoClip.ContentView.body.getter : some"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9 - 3d3fc0a4c79f93d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ShortcutDemoClip.Destination) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;ShortcutDemoClip.UserManualView, ShortcutDemoClip.SpecsView&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.ProductInformationView, ShortcutDemoClip.SubProductsView&gt;&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.CustomerFeedBackView, ShortcutDemoClip.RegisterView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in ShortcutDemoClip.ContentView.body.getter : some"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "3096">
+               </Location>
+               <Location
+                  uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9 - 3d3fc0a4c79f93d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ShortcutDemoClip.Destination) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;ShortcutDemoClip.UserManualView, ShortcutDemoClip.SpecsView&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.ProductInformationView, ShortcutDemoClip.SubProductsView&gt;&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.CustomerFeedBackView, ShortcutDemoClip.RegisterView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in ShortcutDemoClip.ContentView.body.getter : some"
+                  moduleName = "ShortcutDemoClip"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "2768">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
