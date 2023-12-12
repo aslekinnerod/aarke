@@ -1,22 +1,5 @@
 import SwiftUI
 
-enum Brand: String, CaseIterable {
-    case aarke
-    case wilfa
-    case shortcut
-
-    var info: BrandInfo {
-        switch self {
-        case .aarke:
-            return BrandManager.aarke
-        case .wilfa:
-            return BrandManager.wilfa
-        case .shortcut:
-            return BrandManager.shortcut
-        }
-    }
-}
-
 @main
 struct ShortcutAppClipDemo: App {
     @State var brand: Brand?
@@ -26,7 +9,7 @@ struct ShortcutAppClipDemo: App {
         WindowGroup {
             Group {
                 if let brand {
-                    ContentView(brand: brand, path: $path)
+                    MainView(brand: brand, path: $path)
                 } else {
                     ProgressView()
                 }
@@ -51,7 +34,7 @@ struct ShortcutAppClipDemo: App {
         }
 
         for brand in Brand.allCases {
-            if brand.rawValue == brandString {
+            if brand.rawValue.lowercased() == brandString.lowercased() {
                 self.brand = brand
             }
         }
@@ -61,7 +44,7 @@ struct ShortcutAppClipDemo: App {
         }
 
         for destination in Destination.allCases {
-            if destination.rawValue.lowercased() == destinationString {
+            if destination.rawValue.lowercased() == destinationString.lowercased() {
                 path = [destination]
             }
         }

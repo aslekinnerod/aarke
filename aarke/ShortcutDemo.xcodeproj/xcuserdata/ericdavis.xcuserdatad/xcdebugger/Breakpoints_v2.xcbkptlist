@@ -23,188 +23,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3"
+            uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+            filePath = "ShortcutAppClipDemo/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "handleURL(_:)"
-            landmarkType = "7">
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "body"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3 - 25cb92c9bd22b85f"
+                  uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9 - 41e86df6af002bbd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  symbolName = "closure #3 (Foundation.Notification) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in ShortcutDemoClip.ContentView.body.getter : some"
                   moduleName = "ShortcutDemoClip"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "1080">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "380">
                </Location>
                <Location
-                  uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3 - 25cb92c9bd22b83e"
+                  uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9 - 3d3fc0a4c79f93d7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  symbolName = "closure #2 (ShortcutDemoClip.Destination) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;ShortcutDemoClip.UserManualView, ShortcutDemoClip.SpecsView&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.ProductInformationView, ShortcutDemoClip.SubProductsView&gt;&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.CustomerFeedBackView, ShortcutDemoClip.RegisterView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in ShortcutDemoClip.ContentView.body.getter : some"
                   moduleName = "ShortcutDemoClip"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1096">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "3096">
                </Location>
                <Location
-                  uuid = "E3FB1A15-9941-4D5A-AEAC-E8D2340BE6A3 - 25cb92c9bd22b83e"
+                  uuid = "666415B3-56EA-43F8-A252-DEDCB8509BB9 - 3d3fc0a4c79f93d7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
+                  symbolName = "closure #2 (ShortcutDemoClip.Destination) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;ShortcutDemoClip.UserManualView, ShortcutDemoClip.SpecsView&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.ProductInformationView, ShortcutDemoClip.SubProductsView&gt;&gt;, SwiftUI._ConditionalContent&lt;ShortcutDemoClip.CustomerFeedBackView, ShortcutDemoClip.RegisterView&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onReceive&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.Publisher, &#x3c4;_1_0.Failure == Swift.Never&gt;(_: &#x3c4;_1_0, perform: (&#x3c4;_1_0.Output) -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in ShortcutDemoClip.ContentView.body.getter : some"
                   moduleName = "ShortcutDemoClip"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
+                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1080">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8D435144-057F-4E11-B3C2-F495811CC830"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "handleURL(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8D435144-057F-4E11-B3C2-F495811CC830 - 25cb92c9bd22b9c8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
-                  moduleName = "ShortcutDemoClip"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "664">
-               </Location>
-               <Location
-                  uuid = "8D435144-057F-4E11-B3C2-F495811CC830 - 25cb92c9bd22b9ab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
-                  moduleName = "ShortcutDemoClip"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "680">
-               </Location>
-               <Location
-                  uuid = "8D435144-057F-4E11-B3C2-F495811CC830 - 25cb92c9bd22b9ab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
-                  moduleName = "ShortcutDemoClip"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "664">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "handleURL(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892 - 25cb92c9bd22bff8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
-                  moduleName = "ShortcutDemoClip"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "1308">
-               </Location>
-               <Location
-                  uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892 - 25cb92c9bd22bff8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
-                  moduleName = "ShortcutDemoClip"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "1512">
-               </Location>
-               <Location
-                  uuid = "CF65C8AD-4C45-48F9-8893-C48C67143892 - 25cb92c9bd22bff8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShortcutDemoClip.ShortcutAppClipDemo.handleURL(Foundation.URL) -&gt; ()"
-                  moduleName = "ShortcutDemoClip"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ericdavis/Developer/aarke/aarke/ShortcutAppClipDemo/ShortcutAppClipDemo.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "1496">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "2768">
                </Location>
             </Locations>
          </BreakpointContent>

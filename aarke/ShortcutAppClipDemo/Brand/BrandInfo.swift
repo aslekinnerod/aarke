@@ -38,6 +38,7 @@ struct BrandInfo {
     }
 
     // Language
+    let selectLanguageTitle: String
     let selectedLanguage: String
     let additionalLanguages: [String]
 
@@ -95,7 +96,7 @@ struct BrandInfo {
     let productInfoBodyText1: String
     let productInfoSubtitle2: String
     let productInfoBodyText2: String
-    let productInfoVideoURL: URL? = URL(string: "https://www.youtube.com/embed/zbCxs5Mx8rc")
+    let productInfoVideoURL: URL? 
 
     // MARK: - Spare Parts
     //Sub Product 1
@@ -164,17 +165,77 @@ struct BrandInfo {
     let customerFeedbackAlertMessage: String
 
     // MARK: - Register Product
+    let registerProductCountryTitle: String
     let registerProductCountry: String
     let registerProductSerialNumberText: String
     let registerProductProductText: String
     let registerProductNamePlaceholderText: String
     let registerProductEmailPlaceholderText: String
+    let registerProductAlertTitle: String
+    let registerProductAlertText: String
 
-    init(assetFolderName: String, name: String, productName: String, submitButtonText: String, selectedLanguage: String, additionalLanguages: [String], registerProductText: String, subheading: String, userManualText: String, specificationsText: String, productInformationText: String, sparePartsText: String, customerFeedbackText: String, notificationText: String, userManualTitleText: String, userManualProductOverViewText: String, userManualBeforeUseText: String, userManualUserGuideText: String, userManualCleaningText: String, userManualProductOverviewHeaderText: String, userManualProductComponentHeaderText: String, userManualUserGuideViewHeaderText: String, userManualCleaningViewHeaderText: String, specsHeaderText: String, productInfoHeaderText: String, productInfoSubtitle1: String, productInfoBodyText1: String, productInfoSubtitle2: String, productInfoBodyText2: String, subProduct1Title: String, subProduct1Detail: String, subProduct1Price: String, subProduct2Title: String, subProduct2Detail: String, subProduct2Price: String, subProduct3Title: String, subProduct3Detail: String, subProduct3Price: String, subProduct4Title: String, subProduct4Detail: String, subProduct4Price: String, customerFeedbackHeaderText: String, customerFeedbackNameTextFieldPlaceholder: String, customerFeedbackTextEditorTitleText: String, customerFeedbackSubmitButtonText: String, customerFeedbackAlertTitle: String, customerFeedbackAlertMessage: String, registerProductCountry: String, registerProductSerialNumberText: String, registerProductProductText: String, registerProductNamePlaceholderText: String, registerProductEmailPlaceholderText: String) {
+    init(assetFolderName: String, 
+         name: String,
+         productName: String,
+         submitButtonText: String,
+         selectLanguageTitle: String,
+         selectedLanguage: String,
+         additionalLanguages: [String],
+         registerProductText: String,
+         subheading: String,
+         userManualText: String,
+         specificationsText: String,
+         productInformationText: String,
+         sparePartsText: String,
+         customerFeedbackText: String,
+         notificationText: String,
+         userManualTitleText: String,
+         userManualProductOverViewText: String,
+         userManualBeforeUseText: String,
+         userManualUserGuideText: String,
+         userManualCleaningText: String,
+         userManualProductOverviewHeaderText: String,
+         userManualProductComponentHeaderText: String,
+         userManualUserGuideViewHeaderText: String,
+         userManualCleaningViewHeaderText: String,
+         specsHeaderText: String,
+         productInfoHeaderText: String,
+         productInfoSubtitle1: String,
+         productInfoBodyText1: String,
+         productInfoSubtitle2: String,
+         productInfoBodyText2: String,
+         productInfoVideoURL: URL?,
+         subProduct1Title: String,
+         subProduct1Detail: String,
+         subProduct1Price: String,
+         subProduct2Title: String,
+         subProduct2Detail: String,
+         subProduct2Price: String,
+         subProduct3Title: String,
+         subProduct3Detail: String,
+         subProduct3Price: String,
+         subProduct4Title: String,
+         subProduct4Detail: String,
+         subProduct4Price: String,
+         customerFeedbackHeaderText: String,
+         customerFeedbackNameTextFieldPlaceholder: String,
+         customerFeedbackTextEditorTitleText: String,
+         customerFeedbackSubmitButtonText: String,
+         customerFeedbackAlertTitle: String,
+         customerFeedbackAlertMessage: String,
+         registerProductCountryTitle: String,
+         registerProductCountry: String,
+         registerProductSerialNumberText: String,
+         registerProductProductText: String,
+         registerProductNamePlaceholderText: String,
+         registerProductEmailPlaceholderText: String,
+         registerProductAlertTitle: String,
+         registerProductAlertText: String) {
         self.assetFolderName = assetFolderName
         self.name = name
         self.productName = productName
         self.submitButtonText = submitButtonText
+        self.selectLanguageTitle = selectLanguageTitle
         self.selectedLanguage = selectedLanguage
         self.additionalLanguages = additionalLanguages
         self.registerProductText = registerProductText
@@ -196,6 +257,7 @@ struct BrandInfo {
         self.productInfoBodyText1 = productInfoBodyText1
         self.productInfoSubtitle2 = productInfoSubtitle2
         self.productInfoBodyText2 = productInfoBodyText2
+        self.productInfoVideoURL = productInfoVideoURL
         self.subProduct1Title = subProduct1Title
         self.subProduct1Detail = subProduct1Detail
         self.subProduct1Price = subProduct1Price
@@ -214,10 +276,13 @@ struct BrandInfo {
         self.customerFeedbackSubmitButtonText = customerFeedbackSubmitButtonText
         self.customerFeedbackAlertTitle = customerFeedbackAlertTitle
         self.customerFeedbackAlertMessage = customerFeedbackAlertMessage
+        self.registerProductCountryTitle = registerProductCountryTitle
         self.registerProductCountry = registerProductCountry
         self.registerProductSerialNumberText = registerProductSerialNumberText
         self.registerProductProductText = registerProductProductText
         self.registerProductNamePlaceholderText = registerProductNamePlaceholderText
         self.registerProductEmailPlaceholderText = registerProductEmailPlaceholderText
+        self.registerProductAlertTitle = registerProductAlertTitle
+        self.registerProductAlertText = registerProductAlertTitle
     }
 }

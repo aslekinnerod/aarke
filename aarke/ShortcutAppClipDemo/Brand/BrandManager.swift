@@ -5,7 +5,8 @@ struct BrandManager {
         assetFolderName: "shortcut",
         name: "name",
         productName: "productName",
-        submitButtonText: "submitButtonText",
+        submitButtonText: "submitButtonText", 
+        selectLanguageTitle: "selectLanguageTitle",
         selectedLanguage: "selectedLanguage",
         additionalLanguages: [
             "language 1",
@@ -40,6 +41,7 @@ struct BrandManager {
         productInfoBodyText1: "productInfoBodyText1",
         productInfoSubtitle2: "productInfoSubtitle2",
         productInfoBodyText2: "productInfoBodyText2",
+        productInfoVideoURL: URL(string: "https://www.youtube.com/watch?v=kIq9v_d2B34"),
         subProduct1Title: "subProduct1Title",
         subProduct1Detail: "subProduct1Detail",
         subProduct1Price: "subProduct1Price",
@@ -58,11 +60,14 @@ struct BrandManager {
         customerFeedbackSubmitButtonText: "customerFeedbackSubmitButtonText",
         customerFeedbackAlertTitle: "customerFeedbackAlertTitle",
         customerFeedbackAlertMessage: "customerFeedbackAlertMessage",
+        registerProductCountryTitle: "registerProductCountryTitle",
         registerProductCountry: "registerProductCountry",
         registerProductSerialNumberText: "registerProductSerialNumberText",
         registerProductProductText: "registerProductProductText",
         registerProductNamePlaceholderText: "registerProductNamePlaceholderText",
-        registerProductEmailPlaceholderText: "registerProductEmailPlaceholderText"
+        registerProductEmailPlaceholderText: "registerProductEmailPlaceholderText",
+        registerProductAlertTitle: "registerProductAlertTitle",
+        registerProductAlertText: "registerProductAlertText"
     )
 
     static let aarke = BrandInfo(
@@ -70,6 +75,7 @@ struct BrandManager {
         name: "Aarke",
         productName: "Aarke Carbonator 3",
         submitButtonText: "SKICKA",
+        selectLanguageTitle: "Velg Språk:",
         selectedLanguage: "Svenska",
         additionalLanguages: [
             "Finska",
@@ -103,6 +109,7 @@ struct BrandManager {
         productInfoBodyText1: "Carbonator 3 is a premium sparkling water maker in stainless steel. It’s built to last and comes in several.....",
         productInfoSubtitle2: "Best i test",
         productInfoBodyText2: "Aarke Carbonator 3 is built to last. With an obsession for detail and hones....",
+        productInfoVideoURL: URL(string: "https://www.youtube.com/embed/zbCxs5Mx8rc"),
         subProduct1Title: "POLERDUK",
         subProduct1Detail: "Reservedel WSPL-3B",
         subProduct1Price: "99,-",
@@ -120,12 +127,15 @@ struct BrandManager {
         customerFeedbackTextEditorTitleText: "BESKRIV",
         customerFeedbackSubmitButtonText: "SKICKA",
         customerFeedbackAlertTitle: "Tusen Takk!",
-        customerFeedbackAlertMessage: "Din tilbakemelding vil bli behandlet fortløpende.",
+        customerFeedbackAlertMessage: "Din tilbakemelding vil bli behandlet fortløpende.", 
+        registerProductCountryTitle: "Land",
         registerProductCountry: "Sverige",
         registerProductSerialNumberText: "Serienummer:",
         registerProductProductText: "Produkt:",
         registerProductNamePlaceholderText: "NAMN",
-        registerProductEmailPlaceholderText: "E-MAIL"
+        registerProductEmailPlaceholderText: "E-MAIL",
+        registerProductAlertTitle: "Produktet er nå registrert!",
+        registerProductAlertText: "Du vil nå kunne dra nytte av fordelene ved å registere produktet ditt"
     )
 
     static let wilfa = BrandInfo(
@@ -133,6 +143,7 @@ struct BrandManager {
         name: "Wilfa",
         productName: "Wilfa Performance",
         submitButtonText: "Send Inn",
+        selectLanguageTitle: "Velg språk:",
         selectedLanguage: "Norge",
         additionalLanguages: [
             "Finsk",
@@ -166,6 +177,7 @@ struct BrandManager {
         productInfoBodyText1: "Best i test kaffetrakter Performance er ikke bare en ny kaffetrakter - det er kaffetrakteren som er utviklet i Norge.",
         productInfoSubtitle2: "Best i test",
         productInfoBodyText2: "Performance ble best i test hos tek.no sin siste kaffetraktertest",
+        productInfoVideoURL: URL(string: "https://www.youtube.com/watch?v=s0F10F0a8GA"),
         subProduct1Title: "Performance kanne med lokk",
         subProduct1Detail: "Reservedel WSPL-3B",
         subProduct1Price: "300,-",
@@ -183,10 +195,14 @@ struct BrandManager {
         customerFeedbackTextEditorTitleText: "Omtale",
         customerFeedbackSubmitButtonText: "Send inn",
         customerFeedbackAlertTitle: "Alert title",
-        customerFeedbackAlertMessage: "Alert message",
+        customerFeedbackAlertMessage: "Alert message", 
+        registerProductCountryTitle: "Land",
         registerProductCountry: "Norge",
         registerProductSerialNumberText: "1242",
         registerProductProductText: "Wilfa Performance",
         registerProductNamePlaceholderText: "Navn",
-        registerProductEmailPlaceholderText: "E-Mail")
+        registerProductEmailPlaceholderText: "E-Mail",
+        registerProductAlertTitle: "Produktet er nå registrert!",
+        registerProductAlertText: "Du vil nå kunne dra nytte av fordelene ved å registere produktet ditt"
+    )
 }

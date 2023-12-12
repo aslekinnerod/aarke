@@ -12,7 +12,7 @@ struct RegisterView: View {
         VStack(spacing: 0) {
             ScrollView {
                 VStack {
-                    DetailHeaderView(title: "CARBONATOR 3")
+                    DetailHeaderView(title: brand.info.productName)
                         .font(.custom("Helvetica neue", size: 25))
                         .fontWeight(.bold)
                         .foregroundColor(brand.info.textColor)
@@ -37,7 +37,7 @@ struct RegisterView: View {
                         Spacer()
                         RegisterProductInfoView(
                             brand: brand,
-                            titleText: "Land",
+                            titleText: brand.info.registerProductCountryTitle,
                             bodyText: brand.info.registerProductCountry
                         )
                         Spacer()
@@ -46,13 +46,13 @@ struct RegisterView: View {
                     VStack(spacing: 16) {
                         CustomTextFieldView(
                             brand: brand,
-                            placeholderText: "NAMN",
+                            placeholderText: brand.info.name,
                             text: $name
                         )
 
                         CustomTextFieldView(
                             brand: brand,
-                            placeholderText: "E-MAIL",
+                            placeholderText: brand.info.registerProductEmailPlaceholderText,
                             text: $email
                         )
                     }
@@ -67,8 +67,8 @@ struct RegisterView: View {
         }
         .alert(isPresented: $didTapSend) {
             Alert(
-                title: Text("Produktet er nå registrert!"),
-                message: Text("Du vil nå kunne dra nytte av fordelene ved å registere produktet ditt bla bla bla..."),
+                title: Text(brand.info.registerProductAlertTitle),
+                message: Text(brand.info.registerProductAlertText),
                 dismissButton: .default(Text("Ok"), action: {
                     withAnimation {
                         name = ""

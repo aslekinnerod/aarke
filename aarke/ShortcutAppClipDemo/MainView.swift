@@ -1,15 +1,7 @@
 import SwiftUI
 import UserNotifications
 
-enum Destination: String, CaseIterable, Hashable {
-    case userManual
-    case specs
-    case productInformation
-    case subProducts
-    case customerFeedback
-}
-
-struct ContentView: View {
+struct MainView: View {
     let brand: Brand
     @Binding var path: [Destination]
 
@@ -28,6 +20,10 @@ struct ContentView: View {
                         Spacer()
                     }
                     .padding()
+
+                    NavigationLink(value: Destination.registerProduct) {
+                        EmptyView()
+                    }
 
                     NavigationLink(value: Destination.userManual) {
                         CellView(brand: brand, title: brand.info.userManualText)
@@ -64,6 +60,8 @@ struct ContentView: View {
                         SubProductsView(brand: brand)
                     case .customerFeedback:
                         CustomerFeedBackView(brand: brand)
+                    case .registerProduct:
+                        RegisterView(brand: brand)
                     }
                 })
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification), perform: { output in
@@ -90,7 +88,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(brand: .shortcut, path: .constant([]))
+        MainView(brand: .shortcut, path: .constant([]))
     }
 }
 

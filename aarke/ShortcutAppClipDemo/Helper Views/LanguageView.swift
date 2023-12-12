@@ -5,7 +5,7 @@ struct LanguageView: View {
 
     var body: some View {
         VStack {
-            Text("Velg språk:")
+            Text(brand.info.selectLanguageTitle)
                 .font(.custom("Avenir Heavy", size: 24))
                 .fontWeight(.bold)
                 .padding(.bottom)
@@ -13,7 +13,7 @@ struct LanguageView: View {
             ZStack{
                 RectangleView(brand: brand)
                 HStack {
-                    Text("Svenska")
+                    Text(brand.info.selectedLanguage)
                     Text(Image(systemName: "checkmark"))
                 }
             }

@@ -51,8 +51,8 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "_XCAppClipURL"
-            value = "https://shortcut-demo-2dad5.web.app/shortcut/subproducts"
+            key = ""
+            value = ""
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
